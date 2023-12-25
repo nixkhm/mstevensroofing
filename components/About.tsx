@@ -20,7 +20,7 @@ const About = () => {
                     text-black 
                     mt-10"
         >
-          M. Stevens Roofing Specialist & Remodeling Co.
+          M. Stevens Roofing Specialist &amp; Remodeling Co.
         </div>
         {/* <div className="text-lg font-medium text-center text-black mt-3">
           WE BELIEVE A GOOD VALUE IS EXCEPTIONAL QUALITY FOR A FAIR PRICE WITH A
