@@ -9,9 +9,9 @@ const ServicesPreview = () => {
       <div className="flex-1 text-center lg:mb-0 mb-8  mt-10 p-4 rounded-lg ml-5 mr-5">
         <h1 className="text-4xl font-extrabold">Residential</h1>
         <p className="text-lg">
-          Whether you have a leaky roof or you've recently been considering
-          starting fresh with a new one, don't delay any longer! Call us and we
-          will come to your home and give you a free estimate.
+          Whether you have a leaky roof or you&apos;ve recently been considering
+          starting fresh with a new one, don&apos;t delay any longer! Call us
+          and we will come to your home and give you a free estimate.
         </p>
         <Image src={residential} alt="Residential Service" />
       </div>

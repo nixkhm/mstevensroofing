@@ -74,12 +74,12 @@ const About = () => {
           >
             <p>
               M. Stevens Roofing is a family-owned business with offices in
-              South Hampton and Medford. Fully licensed and insured, we're
+              South Hampton and Medford. Fully licensed and insured, we&apos;re
               committed to delivering top-notch roofing services on Long Island.
               Our 25-year dedication has earned us accolades, including the
-              Super Service Award from Angie's List and the Dan’s Best of the
-              Best Platinum Award for exceptional roofing work. With an A+
-              rating from the Better Business Bureau, M. Stevens Roofing
+              Super Service Award from Angie&apos;s List and the Dan&apos;s Best
+              of the Best Platinum Award for exceptional roofing work. With an
+              A+ rating from the Better Business Bureau, M. Stevens Roofing
               guarantees exceptional quality, fair prices, and peace of mind for
               our valued customers. Choose us for the very best in roofing
               services
