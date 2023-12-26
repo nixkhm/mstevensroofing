@@ -6,7 +6,7 @@ import residential from "../public/images/residential.png";
 const ServicesPreview = () => {
   return (
     <div className="flex flex-col lg:flex-row justify-center lg:space-x-8 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400 rounded-lg">
-      <div className="flex-1 text-center lg:mb-0 mb-8  mt-10 p-4 rounded-lg ml-5 mr-5">
+      <div className="flex-1 text-center lg:mb-0 mb-8 mt-10 p-4 rounded-lg ml-5 mr-5">
         <h1 className="text-4xl font-extrabold">Residential</h1>
         <p className="text-lg">
           Whether you have a leaky roof or you&apos;ve recently been considering

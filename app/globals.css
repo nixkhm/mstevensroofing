@@ -9,5 +9,10 @@ body,
 }
 
 .hover-link:hover {
-  @apply hover:text-yellow-400 hover:bg-black hover:rounded-md ;
+  background-color: black;
+}
+
+.social-icon-hover:hover {
+  background-color: #fc5647;
+  color: white;
 }
