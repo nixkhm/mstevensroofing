@@ -66,7 +66,11 @@ const Navbar = () => {
                 Gallery
               </a>
             </div>
-            <Button className={twMerge(`text-xl mr-5 sm:ml-2 sm:mb-2`)}>
+            <Button
+              className={twMerge(
+                `text-xl mr-5 lg:p-5 p-2 lg:ml-0 lg:mb-0 ml-5 mb-5`
+              )}
+            >
               Contact
             </Button>
           </div>

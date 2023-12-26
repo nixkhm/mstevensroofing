@@ -1,9 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import aboutLogo from "../public/images/aboutLogo.png";
 import Button from "./Button";
 import { twMerge } from "tailwind-merge";
+import { useRouter } from "next/navigation";
 
 const About = () => {
+  const router = useRouter();
   return (
     <>
       <div
@@ -87,8 +91,9 @@ const About = () => {
           </div>
         </div>
         <Button
+          onClick={() => router.push("/about")}
           className={twMerge(
-            `text-xl text-white mt-10 bg-red-900 hover:bg-red-600 mb-5`
+            `text-xl p-5 text-white mt-10 bg-red-900 hover:bg-red-600 mb-5`
           )}
         >
           About Us

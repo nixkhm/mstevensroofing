@@ -58,8 +58,12 @@ const Carousel = () => {
                     gap-4 
                     mt-5"
         >
-          <Button className={twMerge(`text-xl text-black`)}>Learn More</Button>
-          <Button className={twMerge(`text-xl  text-black`)}>Contact Us</Button>
+          <Button className={twMerge(`text-xl text-black p-2 lg:p-5`)}>
+            Learn More
+          </Button>
+          <Button className={twMerge(`text-xl  text-black p-2 lg:p-5`)}>
+            Contact Us
+          </Button>
         </div>
       </div>
     </div>
