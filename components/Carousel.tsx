@@ -1,21 +1,21 @@
-"use client";
+'use client'
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import splashHome1 from "../public/images/splashHome1.jpg";
-import Button from "./Button";
-import { twMerge } from "tailwind-merge";
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
+import splashHome1 from '../public/images/splashHome1.jpg'
+import Button from './Button'
+import { twMerge } from 'tailwind-merge'
 
 const Carousel = () => {
-  const [fadeIn, setFadeIn] = useState(false);
+  const [fadeIn, setFadeIn] = useState(false)
 
   useEffect(() => {
-    setFadeIn(true);
-  }, []);
+    setFadeIn(true)
+  }, [])
 
   return (
-    <div className="relative">
-      <Image src={splashHome1} alt="Home" objectFit="cover" />
+    <div className='relative'>
+      <Image src={splashHome1} alt='Home' objectFit='cover' />
       <div
         className={`absolute 
                     inset-0 
@@ -26,8 +26,8 @@ const Carousel = () => {
                     text-white
                     ${
                       fadeIn
-                        ? "opacity-100"
-                        : "opacity-0 transition-opacity duration-5000 ease-in-out"
+                        ? 'opacity-100'
+                        : 'opacity-0 transition-opacity duration-5000 ease-in-out'
                     }`}
       >
         <p
@@ -44,30 +44,30 @@ const Carousel = () => {
                       text-center
                       ${
                         fadeIn
-                          ? "translate-y-0"
-                          : "-translate-y-8 opacity-0 transition-transform duration-3000 ease-in-out"
+                          ? 'translate-y-0'
+                          : '-translate-y-8 opacity-0 transition-transform duration-3000 ease-in-out'
                       }`}
         >
-          Family-owned and operated, specializing in all aspects of roofing
-          systems.
+          Family-owned and operated, specializing in all aspects of remodeling
+          &amp; roofing services
         </p>
         <div
-          className="flex 
+          className='flex 
                     flex-col 
                     sm:flex-row 
                     gap-4 
-                    mt-5"
+                    mt-5'
         >
           <Button className={twMerge(`text-xl text-black p-2 lg:p-5`)}>
             Learn More
           </Button>
-          <Button className={twMerge(`text-xl  text-black p-2 lg:p-5`)}>
+          <Button className={twMerge(`text-xl text-black p-2 lg:p-5`)}>
             Contact Us
           </Button>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Carousel;
+export default Carousel
