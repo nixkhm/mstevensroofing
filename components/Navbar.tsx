@@ -10,11 +10,11 @@ import Socials from './Socials'
 import { useRouter } from 'next/navigation'
 
 const Navbar = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false)
+  const [isMenuOpen, setMenuOpen] = useState(true)
   const router = useRouter()
 
   return (
-    <div className='sticky top-0 z-10'>
+    <div className='sticky top-0 z-10 lg:text-left text-center'>
       <Socials />
       <div className='bg-sky-200 bg-opacity-99'>
         <div className='sticky top-0 flex flex-col z-10 lg:flex-row lg:justify-between lg:items-center'>
@@ -67,9 +67,7 @@ const Navbar = () => {
               </a>
             </div>
             <Button
-              className={twMerge(
-                `text-xl mr-5 lg:p-5 p-2 lg:ml-0 lg:mb-0 ml-5 mb-5`
-              )}
+              className={twMerge(`text-xl mr-5 p-5 lg:ml-0 lg:mb-0 ml-5 mb-5`)}
             >
               Contact
             </Button>
