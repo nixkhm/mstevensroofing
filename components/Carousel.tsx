@@ -34,8 +34,8 @@ const Carousel = () => {
         setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length)
         setCurrentTextIndex(prevIndex => (prevIndex + 1) % text.length)
         setFadeIn(true)
-      }, 500) // Adjust the transition time here
-    }, 6000) // Adjust the interval between images here
+      }, 500)
+    }, 6000)
 
     return () => clearInterval(interval)
   }, [])
@@ -43,16 +43,21 @@ const Carousel = () => {
   return (
     <div className='relative'>
       <div className={`transition-opacity ease-in-out`}>
-        <Image src={images[currentImageIndex]} alt='Home' objectFit='cover' />
+        <Image
+          src={images[currentImageIndex]}
+          alt='Home'
+          style={{ width: '100%' }}
+        />
       </div>
       <div
         className={`absolute 
                     inset-0 
-                    flex 
-                    flex-col 
-                    items-center 
+                    flex
+                    flex-col
+                    items-center
                     justify-center 
                     text-white
+                    mb-10
                     ${
                       fadeIn
                         ? 'opacity-100'

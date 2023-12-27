@@ -6,12 +6,13 @@ const Socials = () => {
       className='flex
                 lg:flex-row
                 lg:sticky
-                top-0 
-                items-center 
-                justify-end 
-                p-1 
+                top-0
+                items-center
+                justify-end
+                p-1
                 bg-black transition
                 flex-col
+                z-30
                 '
     >
       <div
