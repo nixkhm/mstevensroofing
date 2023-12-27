@@ -14,7 +14,10 @@ const Navbar = () => {
   const router = useRouter()
 
   return (
-    <div className='sticky top-0 z-10 lg:text-left text-center'>
+    <div
+      className='lg:sticky top-0 z-10 lg:text-left text-center transition duration-300 
+                ease-in-out'
+    >
       <Socials />
       <div className='bg-sky-200 bg-opacity-99'>
         <div className='sticky top-0 flex flex-col z-10 lg:flex-row lg:justify-between lg:items-center'>
