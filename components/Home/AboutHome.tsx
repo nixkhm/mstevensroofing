@@ -1,12 +1,12 @@
 'use client'
 
 import Image from 'next/image'
-import aboutLogo from '../public/images/aboutLogo.png'
-import Button from './Button'
+import aboutLogo from '../../public/logo/aboutLogo.png'
+import Button from '../Button'
 import { twMerge } from 'tailwind-merge'
 import { useRouter } from 'next/navigation'
 
-const About = () => {
+const AboutHome = () => {
   const router = useRouter()
   return (
     <>
@@ -103,4 +103,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutHome

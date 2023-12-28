@@ -1,9 +1,9 @@
 'use client'
 
-import About from '@/components/About'
-import Awards from '@/components/Awards'
-import Carousel from '@/components/Carousel'
-import ServicesPreview from '@/components/ServicesPreview'
+import AboutHome from '@/components/Home/AboutHome'
+import AwardsHome from '@/components/Home/AwardsHome'
+import CarouselHome from '@/components/Home/Carousel'
+import ServicesHome from '@/components/Home/ServicesHome'
 import { useEffect, useState } from 'react'
 
 export default function Home() {
@@ -18,10 +18,10 @@ export default function Home() {
         fadeIn ? 'opacity-100' : 'opacity-0'
       }`}
     >
-      <Carousel />
-      <About />
-      <ServicesPreview />
-      <Awards />
+      <CarouselHome />
+      <AboutHome />
+      <ServicesHome />
+      <AwardsHome />
     </div>
   )
 }

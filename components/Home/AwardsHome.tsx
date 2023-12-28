@@ -1,4 +1,4 @@
-const Awards = () => {
+const AwardsHome = () => {
   return (
     <div
       className='flex
@@ -39,4 +39,4 @@ const Awards = () => {
   )
 }
 
-export default Awards
+export default AwardsHome

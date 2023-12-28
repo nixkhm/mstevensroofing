@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import commercial from '../public/images/commercial.png'
-import remodeling from '../public/images/remodeling.png'
-import residential from '../public/images/residential.png'
-import Button from './Button'
+import commercial from '../../public/services_home/commercial.png'
+import remodeling from '../../public/services_home/remodeling.png'
+import residential from '../../public/services_home/residential.png'
+import Button from '../Button'
 import { twMerge } from 'tailwind-merge'
 import { useRouter } from 'next/navigation'
 
@@ -47,7 +47,7 @@ const ServiceContainer = ({
       </div>
       <Button
         className={twMerge(
-          'p-4 mt-5 text-lg hover:bg-black hover:text-white border-solid border-black'
+          'p-4 mt-5 text-lg hover:bg-black  hover:text-white border-solid border-black border-2'
         )}
         onClick={handleButtonClick}
       >
@@ -57,7 +57,7 @@ const ServiceContainer = ({
   )
 }
 
-const ServicesPreview = () => {
+const ServicesHome = () => {
   return (
     <div className='flex flex-col lg:flex-row justify-center lg:space-x-8 bg-yellow-400 relative transition'>
       <ServiceContainer
@@ -84,4 +84,4 @@ const ServicesPreview = () => {
   )
 }
 
-export default ServicesPreview
+export default ServicesHome
