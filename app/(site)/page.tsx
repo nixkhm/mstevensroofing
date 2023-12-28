@@ -1,6 +1,7 @@
 'use client'
 
 import About from '@/components/About'
+import Awards from '@/components/Awards'
 import Carousel from '@/components/Carousel'
 import ServicesPreview from '@/components/ServicesPreview'
 import { useEffect, useState } from 'react'
@@ -20,6 +21,7 @@ export default function Home() {
       <Carousel />
       <About />
       <ServicesPreview />
+      <Awards />
     </div>
   )
 }

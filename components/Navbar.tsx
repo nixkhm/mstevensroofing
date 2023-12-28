@@ -93,6 +93,12 @@ const Navbar = () => {
                   >
                     Gallery
                   </a>
+                  <a
+                    onClick={() => router.push('/gallery')}
+                    className='hover-link hover:text-yellow-400 rounded-md hover:bg-black hover:p-3 transition-all duration-300 cursor-pointer'
+                  >
+                    Testimonials
+                  </a>
                 </div>
                 <Button
                   className={twMerge(
@@ -206,6 +212,17 @@ const Navbar = () => {
                 `}
               >
                 Gallery
+              </a>
+              <a
+                onClick={() => router.push('/gallery')}
+                className={`
+                  hover-link
+                  hover:text-yellow-400
+                  rounded-md hover:bg-black hover:p-2
+                  transition-all duration-300 cursor-pointer
+                `}
+              >
+                Testimonials
               </a>
             </div>
             <Button

@@ -14,15 +14,16 @@ const About = () => {
         className='flex 
                   flex-col 
                   items-center 
-                  justify-center 
+                  justify-center
                   bg-red-300'
       >
         <div
-          className='text-3xl
+          className='text-4xl
                     text-center 
                     font-bold 
                     text-black 
-                    mt-10'
+                    mt-10
+                    mb-10'
         >
           M. Stevens Roofing Specialist &amp; Remodeling Co.
         </div>
@@ -41,7 +42,6 @@ const About = () => {
           <div
             className='w-full 
                       md:w-1/2 
-                      text-3xl 
                       text-center 
                       font-bold 
                       text-black 
@@ -93,7 +93,7 @@ const About = () => {
         <Button
           onClick={() => router.push('/about')}
           className={twMerge(
-            `text-xl p-5 text-white mt-10 bg-red-900 hover:bg-red-600 mb-5`
+            `text-xl p-5 text-white mt-10 bg-black hover:bg-red-800  mb-5`
           )}
         >
           About Us
