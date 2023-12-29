@@ -1,3 +1,3 @@
-## M. Stevens Roofing and Remodeling
+# M. Stevens Roofing and Remodeling
 
-# Website Redesign (NextJS, React, TypeScript, TailwindCSS)
+## Website Redesign (NextJS, React, TypeScript, TailwindCSS)

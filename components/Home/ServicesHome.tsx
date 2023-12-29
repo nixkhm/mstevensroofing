@@ -24,13 +24,13 @@ const ServiceContainer = ({
   }
 
   return (
-    <div className='relative flex-1 text-center lg:mb-0 mt-10 p-4 rounded-3xl  group'>
+    <div className='relative flex-1 text-center lg:mb-0 mt-10 p-4 rounded-3xl group'>
       <h1 className='text-4xl font-extrabold mb-5'>{title}</h1>
-      <p className='text-lg bg-gray-300 p-2 rounded-lg font-medium mb-5'>
-        {description}
-      </p>
       <div className='relative'>
-        <div className=' absolute inset-0 rounded-xl transition duration-300 opacity-0'>
+        <p className='text-lg max-w-[450px] min-w-[250px] bg-gray-300 p-2 rounded-lg font-medium mb-5 mx-auto'>
+          {description}
+        </p>
+        <div className='absolute inset-0 rounded-xl transition duration-300 opacity-0'>
           <div className='flex items-center justify-center h-full'>
             <span className='text-white text-lg font-bold'>{title}</span>
           </div>
@@ -45,9 +45,10 @@ const ServiceContainer = ({
           />
         </div>
       </div>
+
       <Button
         className={twMerge(
-          'p-4 mt-5 text-lg hover:bg-black  hover:text-white border-solid border-black border-2'
+          'p-4 mt-5 text-lg hover:bg-black hover:text-white border-solid border-black border-2'
         )}
         onClick={handleButtonClick}
       >
