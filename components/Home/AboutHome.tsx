@@ -17,16 +17,17 @@ const AboutHome = () => {
                   justify-center
                   bg-red-300'
       >
-        <div
-          className='text-4xl
+        <h1
+          className='text-5xl  
+          ml-5 mr-5
                     text-center 
-                    font-bold 
+                    font-extrabold 
                     text-black 
                     mt-10
                     mb-10'
         >
           M. Stevens Roofing Specialist &amp; Remodeling Co.
-        </div>
+        </h1>
         {/* <div className="text-lg font-medium text-center text-black mt-3">
           WE BELIEVE A GOOD VALUE IS EXCEPTIONAL QUALITY FOR A FAIR PRICE WITH A
           WRITTEN GUARANTEE.

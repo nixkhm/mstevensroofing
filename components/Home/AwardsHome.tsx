@@ -8,7 +8,7 @@ const AwardsHome = () => {
           Awards
         </h1>
         <div className='max-w-[800px]'>
-          <h2 className='text-xl font-semibold min-w-[10px]'>
+          <h2 className='text-2xl font-semibold min-w-[10px]'>
             At M. Stevens Roofing, we take pride in our commitment to delivering
             exceptional service, and our efforts have been recognized by
             reputable organizations and publishers. Here&apos;s a glimpse of our
