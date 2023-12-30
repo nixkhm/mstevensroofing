@@ -15,7 +15,7 @@ const MembershipHome = () => {
           Memberships
         </h1>
       </div>
-      <div className='flex justify-center items-center mt-10 flex-wrap'>
+      <div className='flex justify-center items-center mt-10 mb-10 flex-wrap'>
         <div className='mx-2 my-2'>
           <Image src={carlisle} alt='carlisle' width={200} />
         </div>

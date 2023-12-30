@@ -1,5 +1,6 @@
 'use client'
 
+import Footer from '@/components/Footer'
 import AboutHome from '@/components/Home/AboutHome'
 import AwardsHome from '@/components/Home/AwardsHome'
 import CarouselHome from '@/components/Home/Carousel'
@@ -26,6 +27,7 @@ export default function Home() {
       <AwardsHome />
       <TestimonialHome />
       <MembershipHome />
+      <Footer />
     </div>
   )
 }
