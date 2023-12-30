@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import carousel_1 from '../../public/carousel/carousel_1.jpg'
-import carousel_2 from '../../public/carousel/carousel_2.png'
-import carousel_3 from '../../public/carousel/carousel_3.png'
-import carousel_4 from '../../public/carousel/carousel_4.png'
+import carousel_1 from '@/public/Home_Images/carousel/carousel_1.jpg'
+import carousel_2 from '@/public/Home_Images/carousel/carousel_2.png'
+import carousel_3 from '@/public/Home_Images/carousel/carousel_3.png'
+import carousel_4 from '@/public/Home_Images/carousel/carousel_4.png'
 import Button from '../Button'
 import { twMerge } from 'tailwind-merge'
 

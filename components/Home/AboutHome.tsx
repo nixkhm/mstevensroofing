@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import aboutLogo from '../../public/logo/aboutLogo.png'
+import aboutLogo from '@/public/logo/aboutLogo.png'
 import Button from '../Button'
 import { twMerge } from 'tailwind-merge'
 import { useRouter } from 'next/navigation'

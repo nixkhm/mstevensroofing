@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
-import carlisle from '../../public/memberships_home/carlisle.png'
-import bbbacred from '../../public/memberships_home/bbbacred.png'
-import versico from '../../public/memberships_home/versico.jpg'
-import gaf from '../../public/memberships_home/gaf-logo.png'
-import nationalroofing from '../../public/memberships_home/nationalroofing.png'
+import carlisle from '@/public/Home_Images/memberships_home/carlisle.png'
+import bbbacred from '@/public/Home_Images/memberships_home/bbbacred.png'
+import versico from '@/public/Home_Images/memberships_home/versico.jpg'
+import gaf from '@/public/Home_Images/memberships_home/gaf-logo.png'
+import nationalroofing from '@/public/Home_Images/memberships_home/nationalroofing.png'
 
 const MembershipHome = () => {
   const imagesRef = useRef<HTMLDivElement[]>([])

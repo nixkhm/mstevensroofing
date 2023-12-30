@@ -6,9 +6,9 @@ import 'swiper/css/navigation'
 import { Pagination, Autoplay, Navigation } from 'swiper/modules'
 
 import Image from 'next/image'
-import bbb from '../../public/awards_home/bbb.jpeg'
-import dbotb from '../../public/awards_home/dbotb.png'
-import angi from '../../public/awards_home/angi.png'
+import bbb from '@/public/Home_Images/awards_home/bbb.jpeg'
+import dbotb from '@/public/Home_Images/awards_home/dbotb.png'
+import angi from '@/public/Home_Images/awards_home/angi.png'
 
 import { useRouter } from 'next/navigation'
 
