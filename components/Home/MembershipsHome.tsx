@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
-
 import carlisle from '../../public/memberships_home/carlisle.png'
 import bbbacred from '../../public/memberships_home/bbbacred.png'
 import versico from '../../public/memberships_home/versico.jpg'
@@ -8,6 +7,24 @@ import gaf from '../../public/memberships_home/gaf-logo.png'
 import nationalroofing from '../../public/memberships_home/nationalroofing.png'
 
 const MembershipHome = () => {
+  const imagesRef = useRef<HTMLDivElement[]>([])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      imagesRef.current.forEach(element => {
+        const rect = element.getBoundingClientRect()
+        if (rect.top < window.innerHeight) {
+          element.classList.add('slide-in')
+        }
+      })
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <div className='flex flex-col'>
       <div>
@@ -16,19 +33,34 @@ const MembershipHome = () => {
         </h1>
       </div>
       <div className='flex justify-center items-center mt-10 mb-10 flex-wrap'>
-        <div className='mx-2 my-2'>
+        <div
+          ref={el => el && imagesRef.current.push(el)}
+          className='mx-2 my-2 hover:scale-110 transition image-container'
+        >
           <Image src={carlisle} alt='carlisle' width={200} />
         </div>
-        <div className='mx-2 my-2'>
+        <div
+          ref={el => el && imagesRef.current.push(el)}
+          className='mx-2 my-2 hover:scale-110 transition image-container'
+        >
           <Image src={bbbacred} alt='bbbacred' width={200} />
         </div>
-        <div className='mx-2 my-2'>
+        <div
+          ref={el => el && imagesRef.current.push(el)}
+          className='mx-2 my-2 hover:scale-110 transition image-container'
+        >
           <Image src={versico} alt='versico' width={200} />
         </div>
-        <div className='mx-2 my-2'>
+        <div
+          ref={el => el && imagesRef.current.push(el)}
+          className='mx-2 my-2 hover:scale-110 transition image-container'
+        >
           <Image src={gaf} alt='gaf' width={200} />
         </div>
-        <div className='mx-2 my-2'>
+        <div
+          ref={el => el && imagesRef.current.push(el)}
+          className='mx-2 my-2 hover:scale-110 transition image-container'
+        >
           <Image src={nationalroofing} alt='nationalroofing' width={200} />
         </div>
       </div>

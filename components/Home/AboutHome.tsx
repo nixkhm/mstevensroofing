@@ -8,6 +8,9 @@ import { useRouter } from 'next/navigation'
 
 const AboutHome = () => {
   const router = useRouter()
+
+  const experience = new Date().getFullYear() - 1988
+
   return (
     <>
       <div
@@ -24,7 +27,7 @@ const AboutHome = () => {
                     font-extrabold 
                     text-black 
                     mt-10
-                    lg:mb-10'
+                    mb-10'
         >
           M. Stevens Roofing Specialist &amp; Remodeling Co.
         </h1>
@@ -32,6 +35,9 @@ const AboutHome = () => {
           WE BELIEVE A GOOD VALUE IS EXCEPTIONAL QUALITY FOR A FAIR PRICE WITH A
           WRITTEN GUARANTEE.
         </div> */}
+        <h2 className='text-2xl font-semibold lg:mb-10'>
+          {experience}+ Years of Trusted Experience
+        </h2>
         <div
           className='flex 
                     flex-col 
