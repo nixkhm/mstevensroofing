@@ -3,6 +3,7 @@
 import AboutHome from '@/components/Home/AboutHome'
 import AwardsHome from '@/components/Home/AwardsHome'
 import CarouselHome from '@/components/Home/Carousel'
+import MembershipHome from '@/components/Home/MembershipsHome'
 import ServicesHome from '@/components/Home/ServicesHome'
 import TestimonialHome from '@/components/Home/TestimonialHome'
 import { useEffect, useState } from 'react'
@@ -24,6 +25,7 @@ export default function Home() {
       <ServicesHome />
       <AwardsHome />
       <TestimonialHome />
+      <MembershipHome />
     </div>
   )
 }
