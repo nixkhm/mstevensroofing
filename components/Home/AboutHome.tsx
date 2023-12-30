@@ -24,7 +24,7 @@ const AboutHome = () => {
                     font-extrabold 
                     text-black 
                     mt-10
-                    mb-10'
+                    lg:mb-10'
         >
           M. Stevens Roofing Specialist &amp; Remodeling Co.
         </h1>

@@ -43,9 +43,9 @@ const AwardsContainer = ({
         />
       </div>
       {/* Additional wrapper for the title with background and padding */}
-      <div className='bg-white p-2 rounded-full mt-10 hover:bg-black hover:text-white transition max-w-[600px] mx-auto cursor-pointer'>
+      <div className='lg:bg-white p-2 rounded-full mt-10 lg:hover:bg-black hover:text-white transition max-w-[600px] mx-auto cursor-pointer'>
         <h1
-          className='text-2xl font-bold text-blue-800 hover:text-white'
+          className=' text-2xl font-bold text-blue-800 hover:text-white'
           onClick={() => {
             window.open(link, '_blank')
           }}

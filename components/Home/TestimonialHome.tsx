@@ -44,7 +44,7 @@ const TestimonialHome = () => {
         ></div>
         <Button
           className={twMerge(
-            'mt-10 p-5 bg-blue-600 hover:text-white hover:bg-blue-900'
+            'mt-10 p-5 hover:bg-blue-600 text-white bg-blue-900 hover:text-black'
           )}
         >
           View More Testimonials
@@ -52,7 +52,7 @@ const TestimonialHome = () => {
       </div>
 
       {/* Right column for testimonials */}
-      <div className='flex-1 mt-10 ml-5 mr-5'>
+      <div className='flex-1 mt-10 lg:mr-10 mr-0'>
         <div
           className='elfsight-app-24fdbb8b-4f98-4214-a6fa-13985523adbb'
           data-elfsight-app-lazy

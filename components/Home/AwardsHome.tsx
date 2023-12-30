@@ -7,8 +7,8 @@ const AwardsHome = () => {
         <h1 className='text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-8'>
           Awards
         </h1>
-        <div className='max-w-[800px]'>
-          <h2 className='text-2xl font-semibold min-w-[10px]'>
+        <div className='lg:max-w-[1000px] max-w-[475px]'>
+          <h2 className='lg:text-2xl font-semibold text-xl ml-10 mr-9'>
             At M. Stevens Roofing, we take pride in our commitment to delivering
             exceptional service, and our efforts have been recognized by
             reputable organizations and publishers. Here&apos;s a glimpse of our
