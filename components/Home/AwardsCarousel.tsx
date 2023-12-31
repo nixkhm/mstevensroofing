@@ -54,7 +54,7 @@ const AwardsContainer = ({
         </h1>
       </div>
 
-      <div className='relative'>
+      <div className='relative lg:block hidden'>
         <p className='text-xl max-w-[450px] min-w-[250px] p-2 rounded-lg font-medium mb-5 mt-5 mx-auto'>
           {description}
         </p>

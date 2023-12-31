@@ -81,7 +81,7 @@ const AboutHome = () => {
                       bg-gray-300 
                       rounded-xl 
                       shadow-2xl
-                      sm:mr-5'
+                      mr-5 ml-5'
           >
             <p>
               M. Stevens Roofing is a family-owned business with offices in

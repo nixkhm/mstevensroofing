@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
 
         {/* Right Section: Contact Info and Licensing Numbers */}
-        <div>
+        <div className='lg:block hidden'>
           {/* Licensing Numbers */}
           <div className='bg-white text-black rounded-3xl p-5 font-semibold'>
             <p className='lg:text-xl text-lg'>
