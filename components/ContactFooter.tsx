@@ -9,7 +9,7 @@ import { twMerge } from 'tailwind-merge'
 const ContactFooter = () => {
   return (
     <div className='bg-yellow-400 text-black relative'>
-      <div className='flex lg:flex-row flex-col justify-evenly items-center p-4'>
+      <div className='flex lg:flex-row flex-col justify-evenly lg:text-left text-center items-center p-4'>
         <div className='flex-col relative'>
           <h1 className='text-2xl font-extrabold lg:mb-2'>Call us now!</h1>
           <div className='flex items-center lg:mb-10 mb-5'>
@@ -29,9 +29,7 @@ const ContactFooter = () => {
           </div>
         </div>
         <div className='flex-col relative'>
-          <h1 className='text-2xl font-extrabold lg:mb-2 lg:block hidden mb-6'>
-            Our Locations
-          </h1>
+          <h1 className='text-2xl font-extrabold'>Our Locations</h1>
           <div className='flex items-center lg:mb-10 mb-5'>
             <Image
               src={waypoint}
