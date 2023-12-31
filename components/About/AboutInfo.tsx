@@ -5,10 +5,10 @@ import aboutInfo3 from '@/public/About_Images/AboutInfo3.jpeg'
 
 const AboutInfo = () => {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col bg-blue-100'>
       {/* Left Layout */}
-      <div className='flex items-center transition-transform ease-in-out transform hover:translate-x-2'>
-        <div className='hover:opacity-80 w-full'>
+      <div className='flex items-center transition-transform ease-in-out transform hover:translate-x-2 hover:opacity-80'>
+        <div className='w-full'>
           <Image src={aboutInfo1} alt='About info' objectFit='cover' />
         </div>
         <div className='w-full'>
@@ -29,7 +29,7 @@ const AboutInfo = () => {
       </div>
 
       {/* Right Layout */}
-      <div className='flex items-center transition-transform ease-in-out transform hover:translate-x-2'>
+      <div className='flex items-center transition-transform ease-in-out transform hover:translate-x-2 hover:opacity-80'>
         <div className='w-full transition ease-in-out'>
           <div className='text-center transition ease-in-out lg:hover:scale-125'>
             <h1 className='lg:text-3xl text-lg font-bold'>
@@ -43,14 +43,14 @@ const AboutInfo = () => {
             that they will resonate with thousands of customers.
           </p>
         </div>
-        <div className='hover:opacity-80 w-full flex justify-end'>
+        <div className='w-full flex justify-end'>
           <Image src={aboutInfo2} alt='About info' objectFit='cover' />
         </div>
       </div>
 
       {/* Left Layout */}
-      <div className='flex items-center transition-transform ease-in-out transform hover:translate-x-2'>
-        <div className='hover:opacity-80 w-full'>
+      <div className='flex items-center transition-transform ease-in-out transform hover:translate-x-2 hover:opacity-80'>
+        <div className='w-full'>
           <Image src={aboutInfo3} alt='About info' objectFit='cover' />
         </div>
         <div className='w-full transition ease-in-out'>
