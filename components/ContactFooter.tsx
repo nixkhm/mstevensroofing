@@ -60,7 +60,7 @@ const ContactFooter = () => {
               alt='phone'
               width={79}
               height={80}
-              className='opacity-70 lg:block hidden mr-2 mb-6 hover:scale-125 transition'
+              className='opacity-70 lg:block hidden mr-2 mb-10 hover:scale-125 transition'
             />
             <div className='flex flex-col'>
               <h2 className='text-lg font-semibold'>

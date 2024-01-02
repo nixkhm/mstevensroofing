@@ -1,5 +1,7 @@
 'use client'
 
+import 'intersection-observer'
+
 import AboutInfo from '@/components/About/AboutInfo'
 import AboutServices from '@/components/About/AboutServices'
 import Footer from '@/components/Footer'
