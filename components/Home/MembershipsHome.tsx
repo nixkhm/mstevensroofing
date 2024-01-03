@@ -28,38 +28,38 @@ const MembershipHome = () => {
   return (
     <div className='flex flex-col'>
       <div>
-        <h1 className='text-4xl items-center text-center font-extrabold mt-10'>
+        <h1 className='mt-10 items-center text-center text-4xl font-extrabold'>
           Memberships
         </h1>
       </div>
-      <div className='flex justify-center items-center mt-10 mb-10 flex-wrap'>
+      <div className='mb-10 mt-10 flex flex-wrap items-center justify-center'>
         <div
           ref={el => el && imagesRef.current.push(el)}
-          className='mx-2 my-2 hover:scale-110 transition image-container'
+          className='image-container mx-2 my-2 transition hover:scale-110'
         >
           <Image src={carlisle} alt='carlisle' width={200} />
         </div>
         <div
           ref={el => el && imagesRef.current.push(el)}
-          className='mx-2 my-2 hover:scale-110 transition image-container'
+          className='image-container mx-2 my-2 transition hover:scale-110'
         >
           <Image src={bbbacred} alt='bbbacred' width={200} />
         </div>
         <div
           ref={el => el && imagesRef.current.push(el)}
-          className='mx-2 my-2 hover:scale-110 transition image-container'
+          className='image-container mx-2 my-2 transition hover:scale-110'
         >
           <Image src={versico} alt='versico' width={200} />
         </div>
         <div
           ref={el => el && imagesRef.current.push(el)}
-          className='mx-2 my-2 hover:scale-110 transition image-container'
+          className='image-container mx-2 my-2 transition hover:scale-110'
         >
           <Image src={gaf} alt='gaf' width={200} />
         </div>
         <div
           ref={el => el && imagesRef.current.push(el)}
-          className='mx-2 my-2 hover:scale-110 transition image-container'
+          className='image-container mx-2 my-2 transition hover:scale-110'
         >
           <Image src={nationalroofing} alt='nationalroofing' width={200} />
         </div>

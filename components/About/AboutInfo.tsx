@@ -7,19 +7,19 @@ const AboutInfo = () => {
   return (
     <div className='flex flex-col bg-blue-100'>
       {/* Left Layout */}
-      <div className='flex items-center transition-transform ease-in-out transform hover:translate-x-2 hover:opacity-80'>
+      <div className='flex transform items-center transition-transform ease-in-out hover:translate-x-2 hover:opacity-80'>
         <div className='w-full'>
           <Image src={aboutInfo1} alt='About info' objectFit='cover' />
         </div>
         <div className='w-full'>
           <div className='text-center transition ease-in-out lg:hover:scale-125'>
-            <h1 className='lg:text-3xl text-lg font-bold'>
+            <h1 className='text-lg font-bold lg:mt-0 lg:text-3xl'>
               M. Stevens Roofing
               <br />
               Specialist & Remodeling Co.
             </h1>
           </div>
-          <p className='text-md font-medium mx-auto text-center p-3'>
+          <p className='text-md mx-auto p-3 text-center font-medium'>
             M. Stevens Roofing is a family-owned and operated business, with
             offices in South Hampton and Medford. We are fully licensed and
             insured, and we strive to provide the best roofing service and
@@ -29,37 +29,37 @@ const AboutInfo = () => {
       </div>
 
       {/* Right Layout */}
-      <div className='flex items-center transition-transform ease-in-out transform hover:translate-x-2 hover:opacity-80'>
+      <div className='flex transform items-center transition-transform ease-in-out hover:translate-x-2 hover:opacity-80'>
         <div className='w-full transition ease-in-out'>
           <div className='text-center transition ease-in-out lg:hover:scale-125'>
-            <h1 className='lg:text-3xl text-lg font-bold'>
+            <h1 className='text-lg font-bold lg:text-3xl'>
               Quality, Passion, and Respect
             </h1>
           </div>
-          <p className='text-md font-medium mx-auto text-center p-3'>
+          <p className='text-md mx-auto p-3 text-center font-medium'>
             At M. Stevens Roofing, we consider good value as exceptional quality
             at a fair price with a written guarantee. We believe that our high
             ethical standards will be an example in the roofing industry and
             that they will resonate with thousands of customers.
           </p>
         </div>
-        <div className='w-full flex justify-end'>
+        <div className='flex w-full justify-end'>
           <Image src={aboutInfo2} alt='About info' objectFit='cover' />
         </div>
       </div>
 
       {/* Left Layout */}
-      <div className='flex items-center transition-transform ease-in-out transform hover:translate-x-2 hover:opacity-80'>
+      <div className='flex transform items-center transition-transform ease-in-out hover:translate-x-2 hover:opacity-80'>
         <div className='w-full'>
           <Image src={aboutInfo3} alt='About info' objectFit='cover' />
         </div>
         <div className='w-full transition ease-in-out'>
           <div className='text-center transition ease-in-out lg:hover:scale-125'>
-            <h1 className='lg:text-3xl text-lg font-bold'>
+            <h1 className='text-lg font-bold lg:text-3xl'>
               Servicing Long Island <br /> for Over Three Decades
             </h1>
           </div>
-          <p className='text-md font-medium mx-auto text-center p-3'>
+          <p className='text-md mx-auto p-3 text-center font-medium'>
             We have received a number of awards for quality and service,
             including the Super Service Award from Angie&apos;s list, and
             Dan&apos;s Best of the Best Platinum Award for exceptional work in

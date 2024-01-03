@@ -1,3 +1,3 @@
 export default function Residential() {
-  return <div className='w-full h-full'>Residential</div>
+  return <div className='h-full w-full'>Residential</div>
 }

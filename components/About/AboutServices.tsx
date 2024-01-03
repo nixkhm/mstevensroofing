@@ -4,7 +4,7 @@ import ServicesBlock from './ServicesBlock'
 
 const AboutServices = () => {
   return (
-    <div>
+    <div className='hidden lg:block'>
       <Header img={aboutServicesHeader} alt='abt' title='Services' center />
       <ServicesBlock title={'Roofing'} titleLeft />
       <ServicesBlock title={'Remodeling'} titleRight />

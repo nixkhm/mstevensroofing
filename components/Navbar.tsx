@@ -40,69 +40,69 @@ const Navbar = () => {
     <>
       <div id='primary-navbar'>
         <div
-          className='lg:sticky top-0 z-10 lg:text-left text-center transition duration-300 
-                ease-in-out'
+          className='top-0 z-10 text-center transition duration-300 ease-in-out lg:sticky 
+                lg:text-left'
         >
           <Socials />
-          <div className='bg-sky-200 bg-opacity-99'>
-            <div className='sticky top-0 flex flex-col z-10 lg:flex-row lg:justify-between lg:items-center'>
-              <div className='flex justify-between items-center lg:w-1/4'>
+          <div className='bg-opacity-99 bg-sky-200'>
+            <div className='sticky top-0 z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between'>
+              <div className='flex items-center justify-between lg:w-1/4'>
                 <Image
                   src={logo}
                   alt='Logo'
                   onClick={() => router.push('/')}
                   className='cursor-pointer'
                 />
-                <div className='lg:hidden mr-5'>
+                <div className='mr-5 lg:hidden'>
                   <Hamburger toggled={isMenuOpen} toggle={setMenuOpen} />
                 </div>
               </div>
               <div
-                className={`lg:w-3/4 lg:flex lg:justify-end lg:items-center ${
+                className={`lg:flex lg:w-3/4 lg:items-center lg:justify-end ${
                   isMenuOpen ? 'block' : 'hidden'
                 }`}
               >
-                <div className='flex flex-col lg:flex-row gap-4 ml-auto p-5 font-bold text-black text-xl rounded-lg'>
+                <div className='ml-auto flex flex-col gap-4 rounded-lg p-5 text-xl font-bold text-black lg:flex-row'>
                   <a
                     onClick={() => router.push('/about')}
-                    className='hover-link hover:text-yellow-400 rounded-md hover:bg-black hover:p-3 transition-all duration-300 cursor-pointer'
+                    className='hover-link cursor-pointer rounded-md transition-all duration-300 hover:bg-black hover:p-3 hover:text-yellow-400'
                   >
                     About
                   </a>
                   <a
                     onClick={() => router.push('/residential')}
-                    className='hover-link hover:text-yellow-400 rounded-md hover:bg-black hover:p-3 transition-all duration-300 cursor-pointer'
+                    className='hover-link cursor-pointer rounded-md transition-all duration-300 hover:bg-black hover:p-3 hover:text-yellow-400'
                   >
                     Residential
                   </a>
                   <a
                     onClick={() => router.push('/commercial')}
-                    className='hover-link hover:text-yellow-400 rounded-md hover:bg-black hover:p-3 transition-all duration-300 cursor-pointer'
+                    className='hover-link cursor-pointer rounded-md transition-all duration-300 hover:bg-black hover:p-3 hover:text-yellow-400'
                   >
                     Commercial
                   </a>
                   <a
                     onClick={() => router.push('/remodeling')}
-                    className='hover-link hover:text-yellow-400 rounded-md hover:bg-black hover:p-3 transition-all duration-300 cursor-pointer'
+                    className='hover-link cursor-pointer rounded-md transition-all duration-300 hover:bg-black hover:p-3 hover:text-yellow-400'
                   >
                     Remodeling
                   </a>
                   <a
                     onClick={() => router.push('/gallery')}
-                    className='hover-link hover:text-yellow-400 rounded-md hover:bg-black hover:p-3 transition-all duration-300 cursor-pointer'
+                    className='hover-link cursor-pointer rounded-md transition-all duration-300 hover:bg-black hover:p-3 hover:text-yellow-400'
                   >
                     Gallery
                   </a>
                   <a
                     onClick={() => router.push('/gallery')}
-                    className='hover-link hover:text-yellow-400 rounded-md hover:bg-black hover:p-3 transition-all duration-300 cursor-pointer'
+                    className='hover-link cursor-pointer rounded-md transition-all duration-300 hover:bg-black hover:p-3 hover:text-yellow-400'
                   >
                     Testimonials
                   </a>
                 </div>
                 <Button
                   className={twMerge(
-                    `text-xl mr-5 p-5 lg:ml-0 lg:mb-0 ml-5 mb-5`
+                    `mb-5 ml-5 mr-5 p-5 text-xl lg:mb-0 lg:ml-0`
                   )}
                 >
                   Contact
@@ -116,8 +116,8 @@ const Navbar = () => {
       <div
         className={`
           text-center
-          ${isSticky ? 'lg:fixed top-0 z-10' : 'hidden'}
-          transition-all duration-300 ease-in-out lg:block hidden
+          ${isSticky ? 'top-0 z-10 lg:fixed' : 'hidden'}
+          hidden transition-all duration-300 ease-in-out lg:block
         `}
         style={{
           background: isSticky ? 'white' : 'transparent',
@@ -132,7 +132,7 @@ const Navbar = () => {
         <div
           className={`
           sticky top-0
-          flex justify-between items-center
+          flex items-center justify-between
           lg:w-full
         `}
         >
@@ -144,27 +144,27 @@ const Navbar = () => {
             onClick={() => router.push('/')}
             className='cursor-pointer'
           />
-          <div className='lg:hidden mr-5'>
+          <div className='mr-5 lg:hidden'>
             <Hamburger toggled={isMenuOpen} toggle={setMenuOpen} />
           </div>
           <div
             className={`
-              lg:flex lg:justify-end lg:items-center
+              lg:flex lg:items-center lg:justify-end
               ${isMenuOpen ? 'block' : 'hidden'}
             `}
           >
             <div
               className={`
-              flex gap-4 ml-auto p-2 font-bold text-black text-md
+              text-md ml-auto flex gap-4 p-2 font-bold text-black
             `}
             >
               <a
                 onClick={() => router.push('/about')}
                 className={`
                   hover-link
-                  hover:text-yellow-400
-                  rounded-md hover:bg-black hover:p-2
-                  transition-all duration-300 cursor-pointer
+                  cursor-pointer
+                  rounded-md transition-all duration-300
+                  hover:bg-black hover:p-2 hover:text-yellow-400
                 `}
               >
                 About
@@ -173,9 +173,9 @@ const Navbar = () => {
                 onClick={() => router.push('/residential')}
                 className={`
                   hover-link
-                  hover:text-yellow-400
-                  rounded-md hover:bg-black hover:p-2
-                  transition-all duration-300 cursor-pointer
+                  cursor-pointer
+                  rounded-md transition-all duration-300
+                  hover:bg-black hover:p-2 hover:text-yellow-400
                 `}
               >
                 Residential
@@ -184,9 +184,9 @@ const Navbar = () => {
                 onClick={() => router.push('/commercial')}
                 className={`
                   hover-link
-                  hover:text-yellow-400
-                  rounded-md hover:bg-black hover:p-2
-                  transition-all duration-300 cursor-pointer
+                  cursor-pointer
+                  rounded-md transition-all duration-300
+                  hover:bg-black hover:p-2 hover:text-yellow-400
                 `}
               >
                 Commercial
@@ -195,9 +195,9 @@ const Navbar = () => {
                 onClick={() => router.push('/remodeling')}
                 className={`
                   hover-link
-                  hover:text-yellow-400
-                  rounded-md hover:bg-black hover:p-2
-                  transition-all duration-300 cursor-pointer
+                  cursor-pointer
+                  rounded-md transition-all duration-300
+                  hover:bg-black hover:p-2 hover:text-yellow-400
                 `}
               >
                 Remodeling
@@ -206,9 +206,9 @@ const Navbar = () => {
                 onClick={() => router.push('/gallery')}
                 className={`
                   hover-link
-                  hover:text-yellow-400
-                  rounded-md hover:bg-black hover:p-2
-                  transition-all duration-300 cursor-pointer
+                  cursor-pointer
+                  rounded-md transition-all duration-300
+                  hover:bg-black hover:p-2 hover:text-yellow-400
                 `}
               >
                 Gallery
@@ -217,9 +217,9 @@ const Navbar = () => {
                 onClick={() => router.push('/gallery')}
                 className={`
                   hover-link
-                  hover:text-yellow-400
-                  rounded-md hover:bg-black hover:p-2
-                  transition-all duration-300 cursor-pointer
+                  cursor-pointer
+                  rounded-md transition-all duration-300
+                  hover:bg-black hover:p-2 hover:text-yellow-400
                 `}
               >
                 Testimonials
@@ -227,8 +227,8 @@ const Navbar = () => {
             </div>
             <Button
               className={twMerge(`
-                text-md mr-5 p-2
-                lg:ml-0 lg:mb-0 ml-5 mb-5
+                text-md mb-5 ml-5
+                mr-5 p-2 lg:mb-0 lg:ml-0
               `)}
             >
               Contact

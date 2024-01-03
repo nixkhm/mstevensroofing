@@ -3,50 +3,50 @@ import { SocialIcon } from 'react-social-icons'
 const Socials = () => {
   return (
     <div
-      className='flex
-                lg:flex-row
-                lg:sticky
-                top-0
+      className='top-0
+                z-30
+                flex
+                flex-col
                 items-center
                 justify-end
-                p-1
-                bg-black transition
-                flex-col
-                z-30
+                bg-black
+                p-1 transition
+                lg:sticky
+                lg:flex-row
                 '
     >
       <div
-        className='text-white
-                    text-center 
-                    font-bold p-2 
-                    hover:text-black 
+        className='rounded-full
+                    p-2 
+                    text-center font-bold 
+                    text-white 
+                    transition 
                     hover:bg-yellow-400 
-                    rounded-full 
-                    transition'
+                    hover:text-black'
       >
         Office: 631-345-2539
       </div>
       <div
-        className='text-white 
-                    text-center 
-                    font-bold p-2 
-                    hover:text-black 
+        className='rounded-full 
+                    p-2 
+                    text-center font-bold 
+                    text-white 
+                    transition 
                     hover:bg-yellow-400 
-                    rounded-full 
-                    transition'
+                    hover:text-black'
       >
         Cell: 631-662-1862
       </div>
 
       <div
-        className='text-white 
-                    text-center 
-                    font-bold p-2 
-                    mb-1
-                    hover:text-black 
-                    hover:bg-yellow-400 
+        className='mb-1 
                     rounded-lg 
-                    transition'
+                    p-2 text-center 
+                    font-bold
+                    text-white 
+                    transition 
+                    hover:bg-yellow-400 
+                    hover:text-black'
       >
         mstevensroofing@optonline.net
       </div>
@@ -56,21 +56,21 @@ const Socials = () => {
           target='_blank'
           style={{ height: 50, width: 50, padding: 5 }}
           bgColor='transparent'
-          className='hover:bg-blue-600 hover:text-white rounded-full bg-black'
+          className='rounded-full bg-black hover:bg-blue-600 hover:text-white'
         />
         <SocialIcon
           url='https://www.yelp.com/biz/m-stevens-roofing-and-remodeling-southampton-2#reviews'
           target='_blank'
           style={{ height: 50, width: 50, padding: 5 }}
           bgColor='transparent'
-          className='hover:bg-red-600 hover:text-white rounded-full bg-black'
+          className='rounded-full bg-black hover:bg-red-600 hover:text-white'
         />
         <SocialIcon
           url='https://www.angi.com/companylist/us/ny/medford/m-stevens-roofing-co-inc-reviews-484988.htm#reviews-section'
           target='_blank'
           style={{ height: 50, width: 50, padding: 5, color: '#3b5998' }}
           bgColor='transparent'
-          className='social-icon-hover bg-black rounded-full'
+          className='social-icon-hover rounded-full bg-black'
         />
       </div>
     </div>

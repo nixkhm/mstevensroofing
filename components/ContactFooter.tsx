@@ -8,19 +8,19 @@ import { twMerge } from 'tailwind-merge'
 
 const ContactFooter = () => {
   return (
-    <div className='bg-yellow-400 text-black relative'>
-      <div className='flex lg:flex-row flex-col justify-evenly lg:text-left text-center items-center p-4'>
-        <div className='flex-col relative'>
+    <div className='relative bg-yellow-400 text-black'>
+      <div className='flex flex-col items-center justify-evenly p-4 text-center lg:flex-row lg:text-left'>
+        <div className='relative flex-col'>
           <h1 className='text-2xl font-extrabold lg:mb-2'>Call us now!</h1>
-          <div className='flex items-center lg:mb-10 mb-5'>
+          <div className='mb-5 flex items-center lg:mb-10'>
             <Image
               src={phone}
               alt='phone'
               width={50}
               height={50}
-              className='opacity-70 lg:block hidden mr-2 hover:scale-125 transition'
+              className='mr-2 hidden opacity-70 transition hover:scale-125 lg:block'
             />
-            <div className='flex flex-col ml-4'>
+            <div className='ml-4 flex flex-col'>
               <h2 className='text-lg font-semibold'>Office: 631-345-2539</h2>
               <h2 className='text-lg font-semibold'>
                 Mobile (SMS): 631-662-1862
@@ -28,23 +28,23 @@ const ContactFooter = () => {
             </div>
           </div>
         </div>
-        <div className='flex-col relative'>
+        <div className='relative flex-col'>
           <h1 className='text-2xl font-extrabold'>Our Locations</h1>
-          <div className='flex items-center lg:mb-10 mb-5'>
+          <div className='mb-5 flex items-center lg:mb-10'>
             <Image
               src={waypoint}
               alt='phone'
               width={50}
               height={80}
-              className='opacity-70 lg:block hidden hover:scale-125 transition'
+              className='hidden opacity-70 transition hover:scale-125 lg:block'
             />
             <div className='flex flex-row text-center'>
-              <h2 className='text-lg font-semibold p-2'>
+              <h2 className='p-2 text-lg font-semibold'>
                 29 Lincoln Rd
                 <br />
                 Medford, NY 11763
               </h2>
-              <h2 className='text-lg font-semibold p-2'>
+              <h2 className='p-2 text-lg font-semibold'>
                 53 Hill St
                 <br />
                 Southampton, NY 11968
@@ -52,15 +52,15 @@ const ContactFooter = () => {
             </div>
           </div>
         </div>
-        <div className='flex-col relative'>
-          <h1 className='text-2xl font-extrabold mb-2'>Send a Message</h1>
+        <div className='relative flex-col'>
+          <h1 className='mb-2 text-2xl font-extrabold'>Send a Message</h1>
           <div className='flex items-center'>
             <Image
               src={email}
               alt='phone'
               width={79}
               height={80}
-              className='opacity-70 lg:block hidden mr-2 mb-10 hover:scale-125 transition'
+              className='mb-10 mr-2 hidden opacity-70 transition hover:scale-125 lg:block'
             />
             <div className='flex flex-col'>
               <h2 className='text-lg font-semibold'>
@@ -68,7 +68,7 @@ const ContactFooter = () => {
               </h2>
               <div className='flex items-center justify-center'>
                 <Button
-                  className={twMerge('p-2 mt-2 border-black border-4 text-lg')}
+                  className={twMerge('mt-2 border-4 border-black p-2 text-lg')}
                 >
                   Contact
                 </Button>

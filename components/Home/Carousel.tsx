@@ -52,52 +52,52 @@ const Carousel = () => {
       <div
         className={`absolute 
                     inset-0 
+                    mb-10
                     flex
                     flex-col
-                    items-center
-                    justify-center 
+                    items-center 
+                    justify-center
                     text-white
-                    mb-10
                     ${
                       fadeIn
                         ? 'opacity-100'
-                        : 'opacity-0 transition-opacity duration-5000 ease-in-out'
+                        : 'duration-5000 opacity-0 transition-opacity ease-in-out'
                     }`}
       >
         <p
-          className={`sm:text-lg 
+          className={`bg-transparent-200 
+                      rounded-3xl 
+                      bg-black 
+                      p-3 
+                      text-center 
+                      font-extrabold 
+                      sm:text-lg 
                       md:text-xl 
                       lg:text-2xl 
                       xl:text-3xl 
-                      2xl:text-4xl 
-                      font-extrabold 
-                      bg-black 
-                      rounded-3xl 
-                      bg-transparent-200 
-                      p-3 
-                      text-center
+                      2xl:text-4xl
                       ${
                         fadeIn
                           ? 'translate-y-0'
-                          : '-translate-y-8 opacity-0 transition-transform duration-3000 ease-in-out'
+                          : 'duration-3000 -translate-y-8 opacity-0 transition-transform ease-in-out'
                       }`}
         >
           {text[curentTextIndex]}
         </p>
         <div
-          className='flex 
+          className='mt-5 
+                    flex 
                     flex-col 
-                    sm:flex-row 
                     gap-4 
-                    mt-5'
+                    sm:flex-row'
         >
           <Button
-            className={twMerge(`lg:text-xl text-lg text-black p-2 lg:p-5`)}
+            className={twMerge(`p-2 text-lg text-black lg:p-5 lg:text-xl`)}
           >
             Learn More
           </Button>
           <Button
-            className={twMerge(`lg:text-xl text-lg text-black p-2 lg:p-5`)}
+            className={twMerge(`p-2 text-lg text-black lg:p-5 lg:text-xl`)}
           >
             Contact Us
           </Button>

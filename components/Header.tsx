@@ -12,10 +12,10 @@ const Header: React.FC<HeaderProps> = ({ img, title, alt, center }) => {
     <div className='relative'>
       <Image src={img} alt={alt} className='w-full opacity-50' />
       <h1
-        className={`text-black lg:text-6xl text-4xl p-4 font-extrabold absolute
+        className={`absolute p-4 text-4xl font-extrabold text-black lg:text-6xl
           ${
             center
-              ? `text-center w-full top-1/2 transform -translate-y-1/2`
+              ? `top-1/2 w-full -translate-y-1/2 transform text-center`
               : 'bottom-0 left-0'
           }`}
       >

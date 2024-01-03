@@ -18,7 +18,7 @@ export default function About() {
   }, [])
   return (
     <div
-      className={`w-full h-full bg-blue-100 relative transition-opacity duration-300 ease-in-out ${
+      className={`relative h-full w-full bg-blue-100 transition-opacity duration-300 ease-in-out ${
         fadeIn ? 'opacity-100' : 'opacity-0'
       }`}
     >

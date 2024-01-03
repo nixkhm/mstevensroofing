@@ -12,24 +12,24 @@ const Block: React.FC<BlockProps> = ({ name, image, resize }) => {
 
   return (
     <div
-      className='flex flex-grow border-black border-8 rounded-3xl group relative items-center justify-center overflow-hidden transition-all'
+      className='group relative flex flex-grow items-center justify-center overflow-hidden rounded-3xl border-8 border-black transition-all'
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{ width: '200px', height: '250px' }}
     >
       <div
-        className={`w-full h-full absolute bg-gray-700 bg-opacity-60 transition-all ${
+        className={`absolute h-full w-full bg-gray-700 bg-opacity-60 transition-all ${
           isHovered ? 'block' : 'hidden'
         }`}
       />
       <Image
         src={image}
         alt='Roof Clipart'
-        className={`w-full ${resize ? 'p-10' : 'p-2'}`}
+        className={`w-full ${resize ? 'p-16' : 'p-8'}`}
       />
       {isHovered && (
         <h1
-          className='absolute text-2xl bg-white p-2 rounded-full font-semibold transition-all'
+          className='absolute rounded-full bg-white p-2 text-2xl font-semibold transition-all'
           style={{ transform: 'translateY(0)' }}
         >
           {name}

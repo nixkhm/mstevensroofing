@@ -32,7 +32,7 @@ const TestimonialHome = () => {
   return (
     <div className='flex flex-row bg-gray-300'>
       {/* Left column for heading */}
-      <div className='flex-1 flex-col items-center justify-center text-center mt-10'>
+      <div className='mt-10 flex-1 flex-col items-center justify-center text-center'>
         <h1 className='text-4xl font-extrabold'>Testimonials</h1>
         <p className='mt-8 text-2xl font-semibold'>
           Here&apos;s what our clients have to say about us!
@@ -43,7 +43,7 @@ const TestimonialHome = () => {
         ></div>
         <Button
           className={twMerge(
-            'mt-8 mb-5 p-5 hover:bg-blue-600 text-white bg-blue-900 hover:text-black'
+            'mb-5 mt-8 bg-blue-900 p-5 text-white hover:bg-blue-600 hover:text-black'
           )}
         >
           View More Testimonials
@@ -51,7 +51,7 @@ const TestimonialHome = () => {
       </div>
 
       {/* Right column for testimonials */}
-      <div className='flex-1 mt-10 lg:mr-10 mr-0 lg:block hidden'>
+      <div className='mr-0 mt-10 hidden flex-1 lg:mr-10 lg:block'>
         <div
           className='elfsight-app-24fdbb8b-4f98-4214-a6fa-13985523adbb'
           data-elfsight-app-lazy

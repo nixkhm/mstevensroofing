@@ -27,12 +27,8 @@ const AwardsContainer = ({
 }) => {
   const router = useRouter()
 
-  const handleButtonClick = () => {
-    router.push(`/${title.toLowerCase()}`)
-  }
-
   return (
-    <div className='relative flex-1 text-center lg:mb-0 p-4 rounded-3xl group z-40'>
+    <div className='group relative z-40 flex-1 rounded-3xl p-4 text-center lg:mb-0'>
       <div className='flex justify-center overflow-hidden rounded-xl'>
         <Image
           src={image}
@@ -43,7 +39,7 @@ const AwardsContainer = ({
         />
       </div>
       {/* Additional wrapper for the title with background and padding */}
-      <div className='lg:bg-white p-2 rounded-full mt-10 lg:hover:bg-black hover:text-white transition max-w-[600px] mx-auto cursor-pointer'>
+      <div className='mx-auto mt-10 max-w-[600px] cursor-pointer rounded-full p-2 transition hover:text-white lg:bg-white lg:hover:bg-black'>
         <h1
           className=' text-2xl font-bold text-blue-800 hover:text-white'
           onClick={() => {
@@ -54,13 +50,13 @@ const AwardsContainer = ({
         </h1>
       </div>
 
-      <div className='relative lg:block hidden'>
-        <p className='text-xl max-w-[450px] min-w-[250px] p-2 rounded-lg font-medium mb-5 mt-5 mx-auto'>
+      <div className='relative hidden lg:block'>
+        <p className='mx-auto mb-5 mt-5 min-w-[250px] max-w-[450px] rounded-lg p-2 text-xl font-medium'>
           {description}
         </p>
-        <div className='absolute inset-0 rounded-xl transition duration-300 opacity-0'>
-          <div className='flex items-center justify-center h-full'>
-            <span className='text-white text-lg font-bold'>{title}</span>
+        <div className='absolute inset-0 rounded-xl opacity-0 transition duration-300'>
+          <div className='flex h-full items-center justify-center'>
+            <span className='text-lg font-bold text-white'>{title}</span>
           </div>
         </div>
       </div>
@@ -70,7 +66,7 @@ const AwardsContainer = ({
 
 const AwardsCarousel = () => {
   return (
-    <div className='flex items-center justify-center h-full'>
+    <div className='flex h-full items-center justify-center'>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -92,7 +88,7 @@ const AwardsCarousel = () => {
             link='https://dansbotb.com/'
           />
         </SwiperSlide>
-        <SwiperSlide className='flex flex- items-center justify-center'>
+        <SwiperSlide className='flex- flex items-center justify-center'>
           <AwardsContainer
             title='Better Business Bureau Grade A+'
             description="M. Stevens Roofing has received a grade of A+ from the Better Business Bureau. This grade recognizes that we have had ZERO complaints filed against us. We've achieved this A+ rating by making sure our customers are always happy!"

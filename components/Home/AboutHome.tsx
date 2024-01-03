@@ -21,13 +21,13 @@ const AboutHome = () => {
                   bg-red-300'
       >
         <h1
-          className='text-5xl  
-          ml-5 mr-5
+          className='mb-10  ml-5
+          mr-5 mt-10
                     text-center 
+                    text-3xl 
                     font-extrabold 
-                    text-black 
-                    mt-10
-                    mb-10'
+                    text-black
+                    lg:text-5xl'
         >
           M. Stevens Roofing Specialist &amp; Remodeling Co.
         </h1>
@@ -41,47 +41,47 @@ const AboutHome = () => {
         <div
           className='flex 
                     flex-col 
-                    md:flex-row 
                     items-center 
-                    justify-center'
+                    justify-center 
+                    md:flex-row'
         >
           {/* Image on the left */}
           <div
-            className='w-full 
-                      md:w-1/2 
+            className='mt-10 
+                      w-full 
                       text-center 
                       font-bold 
                       text-black 
-                      mt-10 
-                      md:mt-0'
+                      md:mt-0 
+                      md:w-1/2'
           >
             <Image
               className='w-full 
-                        hover:bg-opacity-50
-                        hover:scale-110
-                        hover:rounded-2xl
-                        transition 
-                        duration-300 
-                        ease-in-out'
+                        transition
+                        duration-300
+                        ease-in-out
+                        hover:scale-110 
+                        hover:rounded-2xl 
+                        hover:bg-opacity-50'
               src={aboutLogo}
               alt='Logo'
             />
           </div>
           {/* Copy on the right */}
           <div
-            className='max-w-2xl 
+            className='mx-auto 
+                      ml-5 
+                      mr-5 
+                      mt-4 
+                      max-w-2xl 
+                      rounded-xl 
+                      bg-gray-300 
                       p-4 
                       text-center 
                       text-lg 
-                      text-black 
-                      mt-4 
-                      mx-auto 
-                      md:w-1/2 
                       font-semibold 
-                      bg-gray-300 
-                      rounded-xl 
-                      shadow-2xl
-                      mr-5 ml-5'
+                      text-black
+                      shadow-2xl md:w-1/2'
           >
             <p>
               M. Stevens Roofing is a family-owned business with offices in
@@ -100,7 +100,7 @@ const AboutHome = () => {
         <Button
           onClick={() => router.push('/about')}
           className={twMerge(
-            `text-xl p-5 text-white mt-10 bg-black hover:bg-red-800  mb-5`
+            `mb-5 mt-10 bg-black p-5 text-xl text-white  hover:bg-red-800`
           )}
         >
           About Us

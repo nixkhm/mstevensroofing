@@ -9,15 +9,22 @@ interface LinkPreviewProps {
 
 const LinkPreview: React.FC<LinkPreviewProps> = ({ url, img, description }) => {
   return (
-    <div className='flex items-center justify-center bg-gray-300 text-center hover:bg-blue-900 hover:text-white rounded-full mt-10 transition p-2'>
+    <div
+      className='mt-5 flex items-center justify-center rounded-full bg-gray-300 p-2 text-center transition-shadow hover:cursor-pointer'
+      onClick={() => window.open(url, '_blank')}
+    >
       <Image
         src={img}
         alt='Website preview'
-        className='w-1/6 h-2/5 rounded-2xl p-1 lg:block hidden'
+        className='hidden h-2/5 w-1/6 rounded-2xl p-1 lg:block'
       />
-      <div className='flex-col ml-10'>
-        <h1 className='lg:text-xl text-md font-medium'>{description}</h1>
-        <a href={url} target='_blank' className='text-xl underline'>
+      <div className='flex-col rounded-full p-10 hover:bg-blue-900 hover:text-white lg:ml-10'>
+        <h1 className='mb-3 text-lg font-medium lg:text-xl'>{description}</h1>
+        <a
+          href={url}
+          target='_blank'
+          className='rounded-full p-2 text-xl underline hover:bg-black'
+        >
           Visit Article
         </a>
       </div>

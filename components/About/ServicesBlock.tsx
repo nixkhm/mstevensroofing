@@ -36,12 +36,12 @@ const ServicesBlock: React.FC<ServicesBlockProps> = ({
       {titleLeft && (
         <div
           ref={ref}
-          className={`flex-none mt-10 custom-hidden ${
+          className={`custom-hidden mt-10 flex-none ${
             inView ? 'custom-showTranstion' : ''
           }`}
           style={{ width: '25%' }}
         >
-          <h1 className='lg:text-4xl text-xl font-bold text-center hover:scale-125 transition smooth'>
+          <h1 className='smooth text-center text-xl font-bold transition hover:scale-125 lg:text-4xl'>
             {title}
           </h1>
         </div>
@@ -49,7 +49,7 @@ const ServicesBlock: React.FC<ServicesBlockProps> = ({
 
       <div
         ref={ref}
-        className={`custom-hidden flex flex-row flex-grow gap-4 ${
+        className={`custom-hidden flex flex-grow flex-row gap-4 ${
           inView ? 'custom-showTranstion' : ''
         }`}
       >
@@ -79,19 +79,19 @@ const ServicesBlock: React.FC<ServicesBlockProps> = ({
       {titleRight && (
         <div
           ref={ref}
-          className={`flex-none mt-10 custom-hidden ${
+          className={`custom-hidden mt-10 flex-none ${
             inView ? 'custom-showTranstion' : ''
           }`}
           style={{ width: '25%' }}
         >
-          <h1 className='lg:text-4xl text-xl font-bold text-center hover:scale-110 transition smooth'>
+          <h1 className='smooth text-center text-xl font-bold transition hover:scale-110 lg:text-4xl'>
             {title}
           </h1>
           {showContactButton && (
-            <div className='flex flex-col mt-5'>
+            <div className='mt-5 flex flex-col'>
               <Button
                 className={twMerge(
-                  'p-5 mb-10 lg:text-2xl text-lg bg-blue-300 hover:bg-blue-600 hover:text-white'
+                  'mb-10 bg-blue-300 p-5 text-lg hover:bg-blue-600 hover:text-white lg:text-2xl'
                 )}
               >
                 Contact
