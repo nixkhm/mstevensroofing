@@ -7,8 +7,14 @@ const AboutServices = () => {
     <div>
       <Header img={aboutServicesHeader} alt='abt' title='Services' center />
       <ServicesBlock title={'Roofing'} titleLeft />
-      <ServicesBlock title={'Repairs'} titleRight />
-      <ServicesBlock title={'Remodeling'} titleLeft />
+      <ServicesBlock title={'Remodeling'} titleRight />
+      <ServicesBlock title={'Repairs'} titleLeft />
+
+      <ServicesBlock
+        title={'... And much more. Contact us today for a free quote!'}
+        titleRight
+        showContactButton
+      />
     </div>
   )
 }
