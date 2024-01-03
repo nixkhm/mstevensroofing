@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@dhaiwat10/react-link-preview": "^1.15.0",
+    "@vercel/speed-insights": "^1.0.2",
     "framer-motion": "^10.17.0",
     "hamburger-react": "^2.5.0",
     "intersection-observer": "^0.12.2",
