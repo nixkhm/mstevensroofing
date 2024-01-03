@@ -47,3 +47,62 @@ body,
   filter: blur(0);
   transform: translateX(0);
 }
+
+.parallax img{
+  position: absolute;
+}
+
+.mountain {
+  width: 100%;
+  height: 80%;
+  bottom: 0;
+  z-index: 3;
+}
+
+.sun {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.house {
+  top: 55%;
+  opacity: 90%;
+  left: 5%;
+  transform: translate(-20%, -20%);
+  z-index: 4;
+  }
+
+.clouds-left {
+  left: 0;
+  width: 20%;
+}
+
+.clouds-right {
+  right: 0;
+  width: 20%;
+}
+
+.clouds-bottom {
+  bottom: 0px;
+  width: 100%;
+}
+
+.copy {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 20%;
+  width: 100%;
+  text-align: center;
+}
+
+.copy span {
+  opacity: 0;
+}

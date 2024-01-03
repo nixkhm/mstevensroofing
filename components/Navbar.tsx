@@ -10,7 +10,7 @@ import Socials from './Socials'
 import { useRouter } from 'next/navigation'
 
 const Navbar = () => {
-  const [isMenuOpen, setMenuOpen] = useState(true)
+  const [isMenuOpen, setMenuOpen] = useState(false)
   const [isSticky, setSticky] = useState(false)
   const router = useRouter()
 

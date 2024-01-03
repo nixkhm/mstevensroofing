@@ -3,6 +3,7 @@ import { Figtree } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import Head from 'next/head'
 
 const inter = Figtree({ subsets: ['latin'] })
 
@@ -25,6 +26,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <Head>
+        <meta
+          name='viewport'
+          content='initial-scale=0.50, width=device-width'
+        />
+      </Head>
       <body className={inter.className}>
         <Navbar />
         {children}
