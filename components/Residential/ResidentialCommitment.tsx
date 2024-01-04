@@ -25,7 +25,7 @@ const ResidentialCommitment = () => {
           grabCursor={true}
           modules={[EffectCards, Autoplay]}
           autoplay={{ delay: 2000, disableOnInteraction: true }}
-          className='w-1/2 bg-transparent'
+          className='w-1/2 bg-transparent transition duration-75 ease-in-out hover:scale-105'
         >
           <SwiperSlide>
             <Image src={card1} alt='roofing card' />

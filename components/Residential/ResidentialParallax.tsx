@@ -16,6 +16,7 @@ import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import ResidentialCommitment from './ResidentialCommitment'
+import ResidentialBottom from './ResidentialBottom'
 
 const ResidentialParallax = () => {
   const [background, setBackground] = useState(10)
@@ -165,6 +166,7 @@ const ResidentialParallax = () => {
         </div>
       </div>
       <ResidentialCommitment />
+      <ResidentialBottom />
     </div>
   )
 }

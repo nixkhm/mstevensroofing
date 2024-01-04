@@ -94,7 +94,7 @@ const Navbar = () => {
                     Gallery
                   </a>
                   <a
-                    onClick={() => router.push('/gallery')}
+                    onClick={() => router.push('/testimonials')}
                     className='hover-link cursor-pointer rounded-md transition-all duration-300 hover:bg-black hover:p-3 hover:text-yellow-400'
                   >
                     Testimonials
@@ -214,7 +214,7 @@ const Navbar = () => {
                 Gallery
               </a>
               <a
-                onClick={() => router.push('/gallery')}
+                onClick={() => router.push('/testimonials')}
                 className={`
                   hover-link
                   cursor-pointer
