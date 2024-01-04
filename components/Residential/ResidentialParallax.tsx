@@ -15,8 +15,7 @@ import house4 from '@/public/Residential_Images/house4.png'
 import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
-import ResidentialInfoBlock from './ResidentialInfoBlock'
-import ResidentialMemberships from './ResidentialMemberships'
+import ResidentialCommitment from './ResidentialCommitment'
 
 const ResidentialParallax = () => {
   const [background, setBackground] = useState(10)
@@ -29,6 +28,7 @@ const ResidentialParallax = () => {
   const cloudsRightRef = useRef(null)
   const starsRef = useRef(null)
   const copyRef = useRef(null)
+  const housesRef = [useRef(null), useRef(null), useRef(null), useRef(null)]
 
   const [ref, inView] = useInView({
     triggerOnce: false
@@ -60,6 +60,9 @@ const ResidentialParallax = () => {
       tl.to(cloudsRightRef.current, { x: '20%', opacity: 0 }, 0)
       tl.to(sunRef.current, { y: '+=200%' }, 0)
       tl.to(copyRef.current, { y: '-=200%', opacity: '+=5' }, 0)
+      housesRef.forEach(house => {
+        tl.to(house.current, { opacity: '+=90' }, 0)
+      })
     })
 
     return () => ctx.revert()
@@ -67,7 +70,7 @@ const ResidentialParallax = () => {
 
   return (
     <div
-      className='parallax-outer overflow-hidden'
+      className='parallax-outer'
       style={{
         margin: 0,
         padding: 0,
@@ -77,7 +80,7 @@ const ResidentialParallax = () => {
         background: `linear-gradient(#FCDE9C, #96ACB7 ${background}%, #40376E, #48233C )`
       }}
     >
-      <div className='parallax relative h-[110vh] w-full overflow-clip text-white'>
+      <div className='parallax overflow-visble relative h-[110vh] w-full text-white'>
         <Image
           ref={mountainRef}
           className='mountain scale-y-100'
@@ -86,14 +89,14 @@ const ResidentialParallax = () => {
         />
         <Image
           ref={sunRef}
-          className={`sun custom-hidden ${
+          className={`sun custom-hidden w-[60%] lg:w-[40%] 2xl:w-[30%]  ${
             inView ? 'custom-showTranstion' : ''
           }`}
           src={sun}
           alt='sun'
         />
         <Image
-          ref={cloudsBottomRef}
+          ref={ref}
           className='clouds-bottom'
           src={cloudBottom}
           alt='cloud-bottom'
@@ -112,7 +115,7 @@ const ResidentialParallax = () => {
         />
         <Image ref={starsRef} className='stars' src={stars} alt='stars' />
         <Image
-          ref={ref}
+          ref={housesRef[0]}
           className={`house1 custom-hidden w-1/4 lg:block lg:w-1/6 ${
             inView ? 'custom-showTranstion' : ''
           }`}
@@ -120,7 +123,7 @@ const ResidentialParallax = () => {
           alt='house'
         />
         <Image
-          ref={ref}
+          ref={housesRef[1]}
           className={`house2 custom-hidden w-1/4 lg:block lg:w-1/6 ${
             inView ? 'custom-showTranstion' : ''
           }`}
@@ -128,7 +131,7 @@ const ResidentialParallax = () => {
           alt='house'
         />
         <Image
-          ref={ref}
+          ref={housesRef[2]}
           className={`house3 custom-hidden w-1/4 lg:block lg:w-1/6 ${
             inView ? 'custom-showTranstion' : ''
           }`}
@@ -136,7 +139,7 @@ const ResidentialParallax = () => {
           alt='house'
         />
         <Image
-          ref={ref}
+          ref={housesRef[3]}
           className={`house4 custom-hidden w-1/4 lg:block lg:w-1/6 ${
             inView ? 'custom-showTranstion' : ''
           }`}
@@ -152,11 +155,6 @@ const ResidentialParallax = () => {
             className='text-md z-50 mt-5 rounded-xl border-2 border-black bg-violet-200 p-8 font-semibold text-black lg:text-xl'
             style={{ width: '75%' }}
           >
-            {/* Whether you have a leaky roof or you&apos;ve recently been
-            considering starting fresh with a new one, don&apos;t delay any
-            longer! Call us and we will come to your home and give you an
-            estimate, free of charge. The safety and protection of your home
-            will always be our first priority. */}
             If you&apos;re currently contending with a leaky roof or
             contemplating a fresh start with a new one, we encourage you to take
             prompt action. Contact us, and we&apos;ll promptly schedule a visit
@@ -166,8 +164,7 @@ const ResidentialParallax = () => {
           </p>
         </div>
       </div>
-      <ResidentialInfoBlock />
-      <ResidentialMemberships />
+      <ResidentialCommitment />
     </div>
   )
 }

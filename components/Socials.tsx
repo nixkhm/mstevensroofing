@@ -5,13 +5,13 @@ const Socials = () => {
     <div
       className='top-0
                 z-30
-                flex
+                hidden
                 flex-col
                 items-center
                 justify-end
-                bg-black
-                p-1 transition
-                lg:sticky
+                bg-black p-1
+                transition
+                lg:sticky lg:flex
                 lg:flex-row
                 '
     >
