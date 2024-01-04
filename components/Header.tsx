@@ -10,7 +10,12 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ img, title, alt, center }) => {
   return (
     <div className='relative'>
-      <Image src={img} alt={alt} className='w-full opacity-50 lg:h-40' />
+      <Image
+        src={img}
+        alt={alt}
+        className='w-full opacity-50 lg:h-40'
+        style={{ objectFit: 'cover' }}
+      />
       <h1
         className={`absolute p-4 text-4xl font-extrabold text-black lg:text-6xl
           ${

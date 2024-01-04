@@ -54,7 +54,7 @@ body,
 
 .mountain {
   width: 100%;
-  height: 80%;
+  height: 75%;
   bottom: 0;
   z-index: 3;
 }
@@ -65,13 +65,33 @@ body,
   transform: translate(-50%, -50%);
 }
 
-.house {
+.house1 {
   top: 55%;
-  opacity: 90%;
   left: 5%;
   transform: translate(-20%, -20%);
   z-index: 4;
   }
+
+.house2 {
+  top: 60%;
+  left: 25%;
+  transform: translate(-20%, -20%);
+  z-index: 4;
+}
+
+.house3 {
+  top: 60%;
+  right: 20%;
+  transform: translate(-20%, -20%);
+  z-index: 4;
+}
+
+.house4 {
+  top: 50%;
+  right: 0;
+  transform: translate(-20%, -20%);
+  z-index: 4;
+}
 
 .clouds-left {
   left: 0;
