@@ -8,6 +8,7 @@ import carousel_3 from '@/public/Home_Images/carousel/carousel_3.png'
 import carousel_4 from '@/public/Home_Images/carousel/carousel_4.png'
 import Button from '../Button'
 import { twMerge } from 'tailwind-merge'
+import { useRouter } from 'next/navigation'
 
 const images = [carousel_1, carousel_2, carousel_3, carousel_4]
 
@@ -22,6 +23,8 @@ const Carousel = () => {
   const [fadeIn, setFadeIn] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [curentTextIndex, setCurrentTextIndex] = useState(0)
+
+  const router = useRouter()
 
   useEffect(() => {
     setFadeIn(true)
@@ -92,6 +95,7 @@ const Carousel = () => {
                     sm:flex-row'
         >
           <Button
+            onClick={() => router.push('/about')}
             className={twMerge(`p-2 text-lg text-black lg:p-5 lg:text-xl`)}
           >
             Learn More

@@ -4,13 +4,10 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { Pagination, Autoplay, Navigation } from 'swiper/modules'
-
 import Image from 'next/image'
 import bbb from '@/public/Home_Images/awards_home/bbb.jpeg'
 import dbotb from '@/public/Home_Images/awards_home/dbotb.png'
 import angi from '@/public/Home_Images/awards_home/angi.png'
-
-import { useRouter } from 'next/navigation'
 
 const AwardsContainer = ({
   title,
@@ -25,8 +22,6 @@ const AwardsContainer = ({
   alt: string
   link: string
 }) => {
-  const router = useRouter()
-
   return (
     <div className='group relative z-40 flex-1 rounded-3xl p-4 text-center lg:mb-0'>
       <div className='flex justify-center overflow-hidden rounded-xl'>
@@ -38,7 +33,6 @@ const AwardsContainer = ({
           className='rounded-xl transition duration-300'
         />
       </div>
-      {/* Additional wrapper for the title with background and padding */}
       <div className='mx-auto mt-10 max-w-[600px] cursor-pointer rounded-full p-2 transition hover:text-white lg:bg-white lg:hover:bg-black'>
         <h1
           className=' text-2xl font-bold text-blue-800 hover:text-white'

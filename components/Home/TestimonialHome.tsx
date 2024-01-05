@@ -31,7 +31,6 @@ const TestimonialHome = () => {
 
   return (
     <div className='flex flex-row bg-gray-300'>
-      {/* Left column for heading */}
       <div className='mt-10 flex-1 flex-col items-center justify-center text-center'>
         <h1 className='text-4xl font-extrabold'>Testimonials</h1>
         <p className='mt-8 text-2xl font-semibold'>
@@ -50,7 +49,6 @@ const TestimonialHome = () => {
         </Button>
       </div>
 
-      {/* Right column for testimonials */}
       <div className='mr-0 mt-10 hidden flex-1 lg:mr-10 lg:block'>
         <div
           className='elfsight-app-24fdbb8b-4f98-4214-a6fa-13985523adbb'

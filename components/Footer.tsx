@@ -74,7 +74,6 @@ const Footer = () => {
 
         {/* Right Section: Contact Info and Licensing Numbers */}
         <div className='hidden lg:block'>
-          {/* Licensing Numbers */}
           <div className='rounded-3xl bg-white p-5 font-semibold text-black'>
             <p className='text-lg lg:text-xl'>
               We are fully licensed and insured. Here are our license numbers:

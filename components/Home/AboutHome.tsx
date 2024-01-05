@@ -21,8 +21,7 @@ const AboutHome = () => {
                   bg-red-300'
       >
         <h1
-          className='mb-10  ml-5
-          mr-5 mt-10
+          className='m-10
                     text-center 
                     text-3xl 
                     font-extrabold 
@@ -31,11 +30,7 @@ const AboutHome = () => {
         >
           M. Stevens Roofing Specialist &amp; Remodeling Co.
         </h1>
-        {/* <div className="text-lg font-medium text-center text-black mt-3">
-          WE BELIEVE A GOOD VALUE IS EXCEPTIONAL QUALITY FOR A FAIR PRICE WITH A
-          WRITTEN GUARANTEE.
-        </div> */}
-        <h2 className='text-2xl font-semibold lg:mb-10'>
+        <h2 className='animate-bounce text-2xl font-semibold lg:mb-10'>
           {experience}+ Years of Trusted Experience
         </h2>
         <div
@@ -47,27 +42,25 @@ const AboutHome = () => {
         >
           {/* Image on the left */}
           <div
-            className='mt-10 
-                      w-full 
-                      text-center 
+            className={`mt-10 
+                      w-full
+                      text-center
                       font-bold 
                       text-black 
                       md:mt-0 
-                      md:w-1/2'
+                      lg:w-3/4`}
           >
             <Image
-              className='w-full 
+              className={`w-full
+                        rounded-2xl
+                        p-2
                         transition
-                        duration-300
-                        ease-in-out
-                        hover:scale-110 
-                        hover:rounded-2xl 
-                        hover:bg-opacity-50'
+                        ease-in-out 
+                        hover:scale-110`}
               src={aboutLogo}
               alt='Logo'
             />
           </div>
-          {/* Copy on the right */}
           <div
             className='mx-auto 
                       ml-5 
