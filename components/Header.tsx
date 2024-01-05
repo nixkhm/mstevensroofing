@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ img, title, alt, center }) => {
       <Image
         src={img}
         alt={alt}
-        className='w-full opacity-50 lg:h-40'
+        className='w-full opacity-50 lg:h-60'
         style={{ objectFit: 'cover' }}
       />
       <h1

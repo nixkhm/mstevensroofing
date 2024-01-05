@@ -1,3 +1,27 @@
+'use client'
+
+import Header from '@/components/Header'
+import commercial_header from '@/public/Commercial_Images/commercial_header.png'
+import { useEffect, useState } from 'react'
+
 export default function Commercial() {
-  return <div className='h-full w-full'>Commercial</div>
+  const [fadeIn, setFadeIn] = useState(false)
+
+  useEffect(() => {
+    setFadeIn(true)
+  }, [])
+
+  return (
+    <div
+      className={`relative h-full w-full transition-opacity duration-300 ease-in-out ${
+        fadeIn ? 'opacity-100' : 'opacity-0'
+      }`}
+    >
+      <Header
+        img={commercial_header}
+        title='Commercial'
+        alt='Commercial Header'
+      />
+    </div>
+  )
 }

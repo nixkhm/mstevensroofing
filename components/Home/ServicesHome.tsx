@@ -36,6 +36,7 @@ const ServiceContainer = ({
           </div>
         </div>
         <div className='flex justify-center overflow-hidden rounded-xl'>
+          {/* SwiperJS Effect Creative https://swiperjs.com/demos#effect-creative */}
           <Image
             src={image}
             alt={alt}

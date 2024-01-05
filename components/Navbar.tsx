@@ -76,17 +76,18 @@ const Navbar = () => {
                     Residential
                   </a>
                   <a
-                    onClick={() => router.push('/commercial')}
-                    className='hover-link cursor-pointer rounded-md transition-all duration-300 hover:bg-black hover:p-3 hover:text-yellow-400'
-                  >
-                    Commercial
-                  </a>
-                  <a
                     onClick={() => router.push('/remodeling')}
                     className='hover-link cursor-pointer rounded-md transition-all duration-300 hover:bg-black hover:p-3 hover:text-yellow-400'
                   >
                     Remodeling
                   </a>
+                  <a
+                    onClick={() => router.push('/commercial')}
+                    className='hover-link cursor-pointer rounded-md transition-all duration-300 hover:bg-black hover:p-3 hover:text-yellow-400'
+                  >
+                    Commercial
+                  </a>
+
                   <a
                     onClick={() => router.push('/gallery')}
                     className='hover-link cursor-pointer rounded-md transition-all duration-300 hover:bg-black hover:p-3 hover:text-yellow-400'
@@ -181,17 +182,6 @@ const Navbar = () => {
                 Residential
               </a>
               <a
-                onClick={() => router.push('/commercial')}
-                className={`
-                  hover-link
-                  cursor-pointer
-                  rounded-md transition-all duration-300
-                  hover:bg-black hover:p-2 hover:text-yellow-400
-                `}
-              >
-                Commercial
-              </a>
-              <a
                 onClick={() => router.push('/remodeling')}
                 className={`
                   hover-link
@@ -202,6 +192,18 @@ const Navbar = () => {
               >
                 Remodeling
               </a>
+              <a
+                onClick={() => router.push('/commercial')}
+                className={`
+                  hover-link
+                  cursor-pointer
+                  rounded-md transition-all duration-300
+                  hover:bg-black hover:p-2 hover:text-yellow-400
+                `}
+              >
+                Commercial
+              </a>
+
               <a
                 onClick={() => router.push('/gallery')}
                 className={`
