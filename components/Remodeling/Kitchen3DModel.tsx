@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, PerspectiveCamera, useGLTF } from '@react-three/drei'
+import {
+  OrbitControls,
+  PerspectiveCamera,
+  useGLTF,
+  useProgress
+} from '@react-three/drei'
 import { Suspense } from 'react'
+import Loading from '@/components/Loading'
 
 const Kitchen3DModel = () => {
   const [isGrabbing, setGrabbing] = useState(false)
@@ -13,6 +19,8 @@ const Kitchen3DModel = () => {
   const handleMouseUp = () => {
     setGrabbing(false)
   }
+
+  const { progress } = useProgress()
 
   const LazyLoadedModel = React.lazy(() => import('@/public/Kitchen'))
 
@@ -37,12 +45,21 @@ const Kitchen3DModel = () => {
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
     >
+      {progress < 100 && <Loading />}
       <Canvas>
         <PerspectiveCamera
           makeDefault
-          position={[394, 240, 500]}
+          position={[
+            394,
+            typeof window !== 'undefined' &&
+            window.innerHeight &&
+            window.innerWidth
+              ? window.innerHeight / window.innerWidth
+              : 1,
+            550
+          ]}
           fov={100}
-          zoom={1}
+          zoom={0.75}
         />
         <OrbitControls
           enableZoom={false}
