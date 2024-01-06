@@ -11,7 +11,7 @@ const KitchenInfo = () => {
         gap: '1rem'
       }}
     >
-      <div className='model-container'>
+      <div className='model-container rounded-3xl bg-gray-800'>
         <Kitchen3DModel />
       </div>
       <div

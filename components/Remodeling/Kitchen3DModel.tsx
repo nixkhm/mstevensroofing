@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import { Suspense } from 'react'
 import Model from '@/public/Kitchen'
 
@@ -25,22 +25,24 @@ const Kitchen3DModel = () => {
       onMouseUp={handleMouseUp}
     >
       <Canvas>
-        <OrbitControls
-          enableZoom={true}
-          zoomSpeed={0.5}
-          rotateSpeed={0.5}
-          minDistance={12}
-          maxDistance={15}
-          target={[8, 3, 0]}
-          minPolarAngle={Math.PI / 2}
-          maxPolarAngle={Math.PI / 2}
-          minAzimuthAngle={-Math.PI / 2}
-          maxAzimuthAngle={-Math.PI / 2.5}
-          autoRotate={true}
-          autoRotateSpeed={0.09999}
+        <PerspectiveCamera
+          makeDefault
+          position={[394, 240, 500]}
+          fov={100}
+          zoom={1}
         />
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 0]} />
+        <OrbitControls
+          enableZoom={false}
+          rotateSpeed={0.3}
+          autoRotate={true}
+          autoRotateSpeed={0.75}
+          minAzimuthAngle={0.0009}
+          maxAzimuthAngle={0.65}
+          minPolarAngle={0.9}
+          maxPolarAngle={1.3}
+        />
+        <ambientLight intensity={3} />
+        <pointLight position={[0, 20, 10]} />
         <Suspense fallback={null}>
           <Model />
         </Suspense>
