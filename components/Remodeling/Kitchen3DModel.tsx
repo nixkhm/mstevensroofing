@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import { OrbitControls, PerspectiveCamera, useGLTF } from '@react-three/drei'
 import { Suspense } from 'react'
-import Model from '@/public/Kitchen'
 
 const Kitchen3DModel = () => {
   const [isGrabbing, setGrabbing] = useState(false)
@@ -13,6 +12,20 @@ const Kitchen3DModel = () => {
 
   const handleMouseUp = () => {
     setGrabbing(false)
+  }
+
+  const LazyLoadedModel = React.lazy(() => import('@/public/Kitchen'))
+
+  const KitchenModel = () => {
+    useEffect(() => {
+      useGLTF.preload('@/public/Kitchen')
+    }, [])
+
+    return (
+      <Suspense fallback={null}>
+        <LazyLoadedModel />
+      </Suspense>
+    )
   }
 
   return (
@@ -43,9 +56,7 @@ const Kitchen3DModel = () => {
         />
         <ambientLight intensity={3} />
         <pointLight position={[0, 20, 10]} />
-        <Suspense fallback={null}>
-          <Model />
-        </Suspense>
+        <KitchenModel />
       </Canvas>
     </div>
   )

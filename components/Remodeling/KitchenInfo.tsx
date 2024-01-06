@@ -31,8 +31,7 @@ const KitchenInfo = () => {
           creating lasting impressions. Elevate your home with precision,
           passion, and unparalleled expertise, where every detail reflects your
           unique style. Discover a culinary haven that&apos;s more than just a
-          kitchen;
-          <br /> it&apos;s an embodiment of your aspirations.
+          kitchen; it&apos;s an embodiment of your aspirations.
         </p>
       </div>
     </div>

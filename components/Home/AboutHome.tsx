@@ -59,6 +59,7 @@ const AboutHome = () => {
                         hover:scale-110`}
               src={aboutLogo}
               alt='Logo'
+              loading='lazy'
             />
           </div>
           <div

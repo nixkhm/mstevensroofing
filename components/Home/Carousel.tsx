@@ -50,6 +50,7 @@ const Carousel = () => {
           src={images[currentImageIndex]}
           alt='Home'
           style={{ width: '100%' }}
+          loading='lazy'
         />
       </div>
       <div
