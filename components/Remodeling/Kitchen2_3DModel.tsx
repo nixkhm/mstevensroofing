@@ -9,7 +9,8 @@ import {
   useProgress
 } from '@react-three/drei'
 import { Suspense } from 'react'
-import Loading from '@/components/Loading'
+import Kitchen2_Placeholder from '@/public/Remodeling_Images/kitchen2_placeholder.gif'
+import Image from 'next/image'
 
 const Kitchen2_3DModel = () => {
   const [isGrabbing, setGrabbing] = useState(false)
@@ -46,7 +47,15 @@ const Kitchen2_3DModel = () => {
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
     >
-      {progress < 100 && <Loading />}
+      {progress < 100 && (
+        <div className='relative h-full w-full'>
+          <Image
+            src={Kitchen2_Placeholder}
+            alt='Kitchen Placeholder'
+            layout='fill'
+          />
+        </div>
+      )}
       <Canvas>
         <PerspectiveCamera
           makeDefault

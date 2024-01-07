@@ -1,17 +1,59 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Kitchen3DModel from './Kitchen3DModel'
 import Kitchen2_3DModel from './Kitchen2_3DModel'
+import Kitchen_Placeholder from '@/public/Remodeling_Images/kitchen1_placeholder.gif'
+import Kitchen2_Placeholder from '@/public/Remodeling_Images/kitchen2_placeholder.gif'
+import Image from 'next/image'
 
 const KitchenInfo = () => {
+  const [webGLSupported, setWebGLSupported] = useState(true)
+
+  useEffect(() => {
+    const canvas = document.createElement('canvas')
+    const gl =
+      canvas.getContext('webgl') || canvas.getContext('experimental-webgl')
+    if (!gl) {
+      setWebGLSupported(false)
+    }
+  }, [])
+
   return (
     <div className='w-full bg-gray-600 p-10 text-center'>
       <div className='lg:grid lg:grid-cols-2 lg:gap-6'>
         <div className='model-container mb-6 rounded-3xl bg-gray-800 p-6'>
-          <Kitchen3DModel />
+          {webGLSupported ? (
+            <Kitchen3DModel />
+          ) : (
+            <div className='relative h-full w-full'>
+              <Image
+                src={Kitchen_Placeholder}
+                alt='Kitchen Placeholder'
+                layout='fill'
+              />
+              <h1 className='relative flex items-center justify-center bg-white p-2 text-sm font-bold text-black'>
+                3D Models are supported by WebGL enabled browsers (Chrome,
+                Firefox, Edge)
+              </h1>
+            </div>
+          )}
         </div>
 
         <div className='model-container mb-6 hidden rounded-3xl bg-gray-800 p-6 lg:block'>
-          <Kitchen2_3DModel />
+          {webGLSupported ? (
+            <Kitchen2_3DModel />
+          ) : (
+            <div className='relative h-full w-full'>
+              <Image
+                src={Kitchen2_Placeholder}
+                alt='Kitchen Placeholder'
+                layout='fill'
+              />
+              <h1 className='relative flex items-center justify-center bg-white p-2 text-sm font-bold text-black'>
+                3D Models are supported by WebGL enabled browsers (Chrome,
+                Firefox, Edge)
+              </h1>
+            </div>
+          )}
         </div>
 
         <div className='col-span-2'>
