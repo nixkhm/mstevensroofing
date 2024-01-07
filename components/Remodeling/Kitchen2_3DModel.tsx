@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import {
@@ -9,7 +11,7 @@ import {
 import { Suspense } from 'react'
 import Loading from '@/components/Loading'
 
-const Kitchen3DModel = () => {
+const Kitchen2_3DModel = () => {
   const [isGrabbing, setGrabbing] = useState(false)
 
   const handleMouseDown = () => {
@@ -21,12 +23,11 @@ const Kitchen3DModel = () => {
   }
 
   const { progress } = useProgress()
-
-  const LazyLoadedModel = React.lazy(() => import('@/public/Kitchen'))
+  const LazyLoadedModel = React.lazy(() => import('@/public/Kitchen_2'))
 
   const KitchenModel = () => {
     useEffect(() => {
-      useGLTF.preload('@/public/Kitchen')
+      useGLTF.preload('@/public/Kitchen_2')
     }, [])
 
     return (
@@ -49,29 +50,21 @@ const Kitchen3DModel = () => {
       <Canvas>
         <PerspectiveCamera
           makeDefault
-          position={[
-            394,
-            typeof window !== 'undefined' &&
-            window.innerHeight &&
-            window.innerWidth
-              ? window.innerHeight / window.innerWidth
-              : 1,
-            550
-          ]}
-          fov={100}
-          zoom={0.75}
+          position={[4, 3, 0]}
+          fov={115}
+          zoom={3}
         />
         <OrbitControls
           enableZoom={false}
           rotateSpeed={0.3}
           autoRotate={true}
           autoRotateSpeed={0.75}
-          minAzimuthAngle={0.0009}
-          maxAzimuthAngle={0.65}
-          minPolarAngle={0.9}
-          maxPolarAngle={1.3}
+          minAzimuthAngle={0.8}
+          maxAzimuthAngle={2.35}
+          minPolarAngle={1.1}
+          maxPolarAngle={1.5}
         />
-        <ambientLight intensity={5} />
+        <ambientLight intensity={3} />
         <pointLight position={[0, 20, 10]} intensity={2} />
         <pointLight position={[10, 10, 10]} intensity={1} />
         <pointLight position={[-10, -10, -10]} intensity={1} />
@@ -81,4 +74,4 @@ const Kitchen3DModel = () => {
   )
 }
 
-export default Kitchen3DModel
+export default Kitchen2_3DModel
