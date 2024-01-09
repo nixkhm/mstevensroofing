@@ -2,10 +2,11 @@
 import Header from '@/components/Header'
 import { useEffect, useState } from 'react'
 import remodeling_header from '@/public/Remodeling_Images/remodeling_header.png'
-import Kitchen3DModel from '@/components/Remodeling/Kitchen3DModel'
 import RemodelingInfo from '@/components/Remodeling/RemodelingInfo'
 import KitchenInfo from '@/components/Remodeling/KitchenInfo'
 import Footer from '@/components/Footer'
+import EntryInfo from '@/components/Remodeling/EntryInfo'
+import PatioInfo from '@/components/Remodeling/PatioInfo'
 
 export default function Remodeling() {
   const [fadeIn, setFadeIn] = useState(false)
@@ -27,6 +28,8 @@ export default function Remodeling() {
       />
       <RemodelingInfo />
       <KitchenInfo />
+      <PatioInfo />
+      <EntryInfo />
       <Footer />
     </div>
   )

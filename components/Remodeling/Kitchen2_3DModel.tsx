@@ -9,8 +9,7 @@ import {
   useProgress
 } from '@react-three/drei'
 import { Suspense } from 'react'
-import Kitchen2_Placeholder from '@/public/Remodeling_Images/kitchen2_placeholder.gif'
-import Image from 'next/image'
+import Loading from '@/components/Loading'
 
 const Kitchen2_3DModel = () => {
   const [isGrabbing, setGrabbing] = useState(false)
@@ -47,38 +46,35 @@ const Kitchen2_3DModel = () => {
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
     >
-      {progress < 100 && (
+      {progress < 100 ? (
         <div className='relative h-full w-full'>
-          <Image
-            src={Kitchen2_Placeholder}
-            alt='Kitchen Placeholder'
-            layout='fill'
-          />
+          <Loading />
         </div>
+      ) : (
+        <Canvas>
+          <PerspectiveCamera
+            makeDefault
+            position={[4, 3, 0]}
+            fov={115}
+            zoom={3}
+          />
+          <OrbitControls
+            enableZoom={false}
+            rotateSpeed={0.3}
+            autoRotate={true}
+            autoRotateSpeed={0.75}
+            minAzimuthAngle={0.8}
+            maxAzimuthAngle={2.35}
+            minPolarAngle={1.1}
+            maxPolarAngle={1.5}
+          />
+          <ambientLight intensity={3} />
+          <pointLight position={[0, 20, 10]} intensity={2} />
+          <pointLight position={[10, 10, 10]} intensity={1} />
+          <pointLight position={[-10, -10, -10]} intensity={1} />
+          <KitchenModel />
+        </Canvas>
       )}
-      <Canvas>
-        <PerspectiveCamera
-          makeDefault
-          position={[4, 3, 0]}
-          fov={115}
-          zoom={3}
-        />
-        <OrbitControls
-          enableZoom={false}
-          rotateSpeed={0.3}
-          autoRotate={true}
-          autoRotateSpeed={0.75}
-          minAzimuthAngle={0.8}
-          maxAzimuthAngle={2.35}
-          minPolarAngle={1.1}
-          maxPolarAngle={1.5}
-        />
-        <ambientLight intensity={3} />
-        <pointLight position={[0, 20, 10]} intensity={2} />
-        <pointLight position={[10, 10, 10]} intensity={1} />
-        <pointLight position={[-10, -10, -10]} intensity={1} />
-        <KitchenModel />
-      </Canvas>
     </div>
   )
 }

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Patio
+* source:	https://sketchfab.com/3d-models/patio-fea3689820264d92930c63203e9d3d49
+* author:	G&L Architectural Graphics Inc (https://sketchfab.com/BERSEKAEL)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Patio" (https://sketchfab.com/3d-models/patio-fea3689820264d92930c63203e9d3d49) by G&L Architectural Graphics Inc (https://sketchfab.com/BERSEKAEL) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
