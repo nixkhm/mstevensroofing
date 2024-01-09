@@ -17,7 +17,7 @@ export default function Remodeling() {
 
   return (
     <div
-      className={`relative h-full w-full bg-gray-600 text-white transition-opacity duration-300 ease-in-out ${
+      className={`relative h-full w-full  text-white transition-opacity duration-300 ease-in-out ${
         fadeIn ? 'opacity-100' : 'opacity-0'
       }`}
     >

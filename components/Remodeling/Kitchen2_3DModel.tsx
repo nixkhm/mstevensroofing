@@ -62,6 +62,7 @@ const Kitchen2_3DModel = () => {
             enableZoom={false}
             rotateSpeed={0.3}
             autoRotate={true}
+            reverseOrbit={true}
             autoRotateSpeed={0.75}
             minAzimuthAngle={0.8}
             maxAzimuthAngle={2.35}

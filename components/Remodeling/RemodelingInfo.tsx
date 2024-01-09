@@ -1,7 +1,7 @@
 const RemodelingInfo = () => {
   return (
-    <div className='mt-10 flex flex-row items-center justify-center text-center'>
-      <h1 className='rounded-full bg-black p-5 text-center text-lg font-extrabold lg:text-3xl'>
+    <div className='flex flex-row items-center justify-center p-10 text-center'>
+      <h1 className='rounded-full bg-blue-900 bg-opacity-80 p-5 text-center text-lg font-[700] text-white lg:text-3xl'>
         Transform Your Kitchen, Patio, or Deck with Unparalleled Remodeling
         Excellence!
       </h1>
