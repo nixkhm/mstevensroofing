@@ -9,9 +9,13 @@ import {
 import { Suspense } from 'react'
 import Loading from '@/components/Loading'
 import { useInView } from 'react-intersection-observer'
+import { OrbitControls as OrbitControlsType } from 'three/examples/jsm/controls/OrbitControls.js'
 
 const Patio2_3DModel = () => {
   const [isGrabbing, setGrabbing] = useState(false)
+  const [rotate, setRotate] = useState(true)
+
+  const controls = useRef<OrbitControlsType | null>(null)
   const [ref, inView] = useInView()
 
   const handleMouseDown = () => {
@@ -38,6 +42,19 @@ const Patio2_3DModel = () => {
     )
   }
 
+  const handleChange = () => {
+    if (controls.current) {
+      const azimuth = controls.current.getAzimuthalAngle()
+      if (azimuth === -2.6) setRotate(false)
+      else if (azimuth === -3.1) setRotate(true)
+    }
+  }
+
+  /* TODO: Fix TypeScript Type Error for ref here */
+  const setControlsRef = (ref: any | null) => {
+    controls.current = ref
+  }
+
   return (
     <div
       className={`lg:w[50%] w[100%] h-[100%] items-center bg-sky-200 bg-opacity-70 ${
@@ -54,6 +71,7 @@ const Patio2_3DModel = () => {
       )}
       <Canvas ref={ref}>
         <OrbitControls
+          ref={orbitControls => setControlsRef(orbitControls)}
           rotateSpeed={0.5}
           autoRotateSpeed={0.3}
           minAzimuthAngle={-3.1}
@@ -62,7 +80,8 @@ const Patio2_3DModel = () => {
           maxPolarAngle={1.5}
           autoRotate={inView && true}
           enableZoom={false}
-          reverseOrbit={true}
+          reverseOrbit={rotate}
+          onChange={handleChange}
         />
         <ambientLight intensity={2} />
         <ambientLight intensity={1} />

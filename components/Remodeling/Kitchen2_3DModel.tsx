@@ -1,6 +1,4 @@
-'use client'
-
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import {
   OrbitControls,
@@ -10,9 +8,15 @@ import {
 } from '@react-three/drei'
 import { Suspense } from 'react'
 import Loading from '@/components/Loading'
+import { useInView } from 'react-intersection-observer'
+import { OrbitControls as OrbitControlsType } from 'three/examples/jsm/controls/OrbitControls.js'
 
 const Kitchen2_3DModel = () => {
   const [isGrabbing, setGrabbing] = useState(false)
+  const [rotate, setRotate] = useState(true)
+
+  const controls = useRef<OrbitControlsType | null>(null)
+  const [ref, inView] = useInView()
 
   const handleMouseDown = () => {
     setGrabbing(true)
@@ -37,6 +41,19 @@ const Kitchen2_3DModel = () => {
     )
   }
 
+  const handleChange = () => {
+    if (controls.current) {
+      const azimuth = controls.current.getAzimuthalAngle()
+      if (azimuth === 0.8) setRotate(true)
+      else if (azimuth === 2.35) setRotate(false)
+    }
+  }
+
+  /* TODO: Fix TypeScript Type Error for ref here */
+  const setControlsRef = (ref: any | null) => {
+    controls.current = ref
+  }
+
   return (
     <div
       className={`lg:w[50%] w[100%] h-[100%] items-center bg-gray-200  ${
@@ -51,7 +68,7 @@ const Kitchen2_3DModel = () => {
           <Loading />
         </div>
       ) : (
-        <Canvas>
+        <Canvas ref={ref}>
           <PerspectiveCamera
             makeDefault
             position={[4, 3, 0]}
@@ -59,15 +76,17 @@ const Kitchen2_3DModel = () => {
             zoom={3}
           />
           <OrbitControls
+            ref={orbitControls => setControlsRef(orbitControls)}
             enableZoom={false}
             rotateSpeed={0.3}
-            autoRotate={true}
-            reverseOrbit={true}
+            autoRotate={inView && true}
+            reverseOrbit={rotate}
             autoRotateSpeed={0.75}
             minAzimuthAngle={0.8}
             maxAzimuthAngle={2.35}
             minPolarAngle={1.1}
             maxPolarAngle={1.5}
+            onChange={handleChange}
           />
           <ambientLight intensity={3} />
           <pointLight position={[0, 20, 10]} intensity={2} />

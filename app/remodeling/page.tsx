@@ -2,7 +2,6 @@
 import Header from '@/components/Header'
 import { useEffect, useState } from 'react'
 import remodeling_header from '@/public/Remodeling_Images/remodeling_header.png'
-import RemodelingInfo from '@/components/Remodeling/RemodelingInfo'
 import KitchenInfo from '@/components/Remodeling/KitchenInfo'
 import Footer from '@/components/Footer'
 import EntryInfo from '@/components/Remodeling/EntryInfo'
@@ -26,7 +25,6 @@ export default function Remodeling() {
         title='Remodeling'
         alt='Remodeling Header'
       />
-      <RemodelingInfo />
       <KitchenInfo />
       <PatioInfo />
       <EntryInfo />
