@@ -65,7 +65,7 @@ const KitchenInfo = () => {
           <h1 className='mb-3 text-3xl font-bold'>
             Embark on a Journey to Culinary Splendor!
           </h1>
-          <p className='mx-auto text-sm font-semibold lg:w-3/4 lg:text-xl'>
+          <p className='mx-auto text-sm font-normal lg:w-3/4 lg:text-xl'>
             Our kitchen remodeling services redefine excellence, turning your
             dreams into a masterpiece. Experience the pinnacle of satisfaction
             with our skilled craftsmen, dedicated to transforming spaces and

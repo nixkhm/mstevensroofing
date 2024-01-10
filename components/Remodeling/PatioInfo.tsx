@@ -54,7 +54,7 @@ const PatioInfo = () => {
           <h1 className='mb-3 text-3xl font-bold text-black'>
             Transform Your Backyard into a Tranquil Oasis of Dreams!
           </h1>
-          <p className='mx-auto text-sm font-semibold text-black lg:w-3/4 lg:text-xl'>
+          <p className='mx-auto text-sm font-normal text-black lg:w-3/4 lg:text-xl'>
             Our patio remodeling services redefine excellence, turning your
             outdoor dreams into a masterpiece. Experience the pinnacle of
             satisfaction with our skilled craftsmen, dedicated to transforming

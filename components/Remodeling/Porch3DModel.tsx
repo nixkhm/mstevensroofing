@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import {
   OrbitControls,
@@ -11,9 +11,9 @@ import Loading from '@/components/Loading'
 import { useInView } from 'react-intersection-observer'
 import { OrbitControls as OrbitControlsType } from 'three/examples/jsm/controls/OrbitControls.js'
 
-const Patio2_3DModel = () => {
+const Porch3DModel = () => {
   const [isGrabbing, setGrabbing] = useState(false)
-  const [rotate, setRotate] = useState(true)
+  const [rotate, setRotate] = useState(false)
 
   const controls = useRef<OrbitControlsType | null>(null)
   const [ref, inView] = useInView()
@@ -28,11 +28,11 @@ const Patio2_3DModel = () => {
 
   const { progress } = useProgress()
 
-  const LazyLoadedModel = React.lazy(() => import('@/public/Patio_2'))
+  const LazyLoadedModel = React.lazy(() => import('@/public/Porch'))
 
-  const PatioModel = () => {
+  const PorchModel = () => {
     useEffect(() => {
-      useGLTF.preload('@/public/Patio_2')
+      useGLTF.preload('@/public/Porch')
     }, [])
 
     return (
@@ -45,8 +45,8 @@ const Patio2_3DModel = () => {
   const handleChange = () => {
     if (controls.current) {
       const azimuth = controls.current.getAzimuthalAngle()
-      if (azimuth === -2.6) setRotate(false)
-      else if (azimuth === -3.1) setRotate(true)
+      if (azimuth === 1.8) setRotate(false)
+      else if (azimuth === 0.99) setRotate(true)
     }
   }
 
@@ -57,7 +57,7 @@ const Patio2_3DModel = () => {
 
   return (
     <div
-      className={`lg:w[50%] w[100%] h-[100%] items-center bg-sky-200 bg-opacity-70 ${
+      className={`lg:w[50%] w[100%] h-[100%] items-center bg-sky-100 ${
         isGrabbing ? 'cursor-grabbing' : 'hover:cursor-grab'
       }`}
       style={{ height: '100%', width: '100%', margin: '0 auto' }}
@@ -70,31 +70,33 @@ const Patio2_3DModel = () => {
         </div>
       )}
       <Canvas ref={ref}>
+        <PerspectiveCamera
+          makeDefault
+          position={[743, 114, -173]}
+          fov={100}
+          zoom={2}
+        />
         <OrbitControls
           ref={orbitControls => setControlsRef(orbitControls)}
-          rotateSpeed={0.5}
-          autoRotateSpeed={0.6}
-          minAzimuthAngle={-3.1}
-          maxAzimuthAngle={-2.6}
-          minPolarAngle={1.01}
-          maxPolarAngle={1.5}
-          autoRotate={inView && true}
           enableZoom={false}
+          rotateSpeed={0.3}
+          autoRotate={inView && true}
+          autoRotateSpeed={0.75}
+          minAzimuthAngle={0.99}
+          maxAzimuthAngle={1.8}
+          minPolarAngle={1.17}
+          maxPolarAngle={1.5}
           reverseOrbit={rotate}
           onChange={handleChange}
         />
-        <ambientLight intensity={2} />
-        <ambientLight intensity={1} />
-        <PerspectiveCamera
-          makeDefault
-          position={[-22, 77, -550]}
-          fov={130}
-          zoom={1.5}
-        />
-        <PatioModel />
+        <ambientLight intensity={3} />
+        <pointLight position={[0, 20, 10]} intensity={2} />
+        <pointLight position={[10, 10, 10]} intensity={1} />
+        <pointLight position={[-10, -10, -10]} intensity={1} />
+        <PorchModel />
       </Canvas>
     </div>
   )
 }
 
-export default Patio2_3DModel
+export default Porch3DModel

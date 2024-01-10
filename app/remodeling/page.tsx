@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import remodeling_header from '@/public/Remodeling_Images/remodeling_header.png'
 import KitchenInfo from '@/components/Remodeling/KitchenInfo'
 import Footer from '@/components/Footer'
-import EntryInfo from '@/components/Remodeling/EntryInfo'
+import PorchInfo from '@/components/Remodeling/PorchInfo'
 import PatioInfo from '@/components/Remodeling/PatioInfo'
 
 export default function Remodeling() {
@@ -27,7 +27,7 @@ export default function Remodeling() {
       />
       <KitchenInfo />
       <PatioInfo />
-      <EntryInfo />
+      <PorchInfo />
       <Footer />
     </div>
   )
