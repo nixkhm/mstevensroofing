@@ -28,11 +28,11 @@ const Patio2_3DModel = () => {
 
   const { progress } = useProgress()
 
-  const LazyLoadedModel = React.lazy(() => import('@/public/Patio_2'))
+  const LazyLoadedModel = React.lazy(() => import('@/public/3DModels/Patio_2'))
 
   const PatioModel = () => {
     useEffect(() => {
-      useGLTF.preload('@/public/Patio_2')
+      useGLTF.preload('@/public/3DModels/Patio_2')
     }, [])
 
     return (

@@ -1,10 +1,15 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import Kitchen_Placeholder from '@/public/Remodeling_Images/kitchen1_placeholder.gif'
+import Porch_Placeholder from '@/public/Remodeling_Images/porch_placeholder.gif'
 import Porch3DModel from './Porch3DModel'
+import Button from '../Button'
+import { twMerge } from 'tailwind-merge'
+import { useRouter } from 'next/navigation'
 
 const EntryInfo = () => {
   const [webGLSupported, setWebGLSupported] = useState(true)
+
+  const router = useRouter()
 
   useEffect(() => {
     const canvas = document.createElement('canvas')
@@ -19,7 +24,7 @@ const EntryInfo = () => {
     <div
       className='w-full p-10 text-center'
       style={{
-        background: `linear-gradient(#895B1E, #CCB69B, #284B63 )`
+        background: `linear-gradient(#EEC584, #CACAAA, #55868C)`
       }}
     >
       <div className='lg:grid lg:grid-cols-1 lg:gap-1'>
@@ -29,11 +34,11 @@ const EntryInfo = () => {
           ) : (
             <div className='relative h-full w-full'>
               <Image
-                src={Kitchen_Placeholder}
-                alt='Kitchen Placeholder'
+                src={Porch_Placeholder}
+                alt='Porch Placeholder'
                 layout='fill'
               />
-              <h1 className='relative flex items-center justify-center bg-white p-2 text-sm font-bold text-black'>
+              <h1 className='text-md relative  flex items-center justify-center bg-black p-1 font-bold text-white'>
                 3D Models are supported by WebGL enabled browsers (Chrome,
                 Firefox, Edge)
               </h1>
@@ -43,9 +48,9 @@ const EntryInfo = () => {
 
         <div className='col-span-2 text-black'>
           <h1 className='mb-3 text-3xl font-bold'>
-            Transformative Front-Facade Remodeling for Lasting Impressions
+            Front-Facade Remodeling for Lasting Impressions
           </h1>
-          <p className='mx-auto text-sm font-normal  lg:w-3/4 lg:text-xl'>
+          <p className='mx-auto text-sm font-normal lg:w-3/4 lg:text-xl'>
             Step into a world where skilled artisans breathe life into your
             home&apos;s exterior. With precision and a keen eye for detail, we
             transform porches and entryways into captivating masterpieces,
@@ -54,6 +59,21 @@ const EntryInfo = () => {
             impressions. Trust us to redefine your living space with a
             harmonious blend of architectural brilliance and welcoming charm
           </p>
+          <Button
+            className={twMerge(
+              'mt-10 border-4 border-black bg-blue-300 p-4 text-xl hover:bg-white lg:mr-5 lg:p-5'
+            )}
+          >
+            Get a Free Quote
+          </Button>
+          <Button
+            onClick={() => router.push('/testimonials')}
+            className={twMerge(
+              'mt-10 border-4 border-black bg-yellow-300 p-4 text-xl hover:bg-white lg:ml-5 lg:p-5'
+            )}
+          >
+            Hear from Satisfied Clients
+          </Button>
         </div>
       </div>
     </div>

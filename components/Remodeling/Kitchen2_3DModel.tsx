@@ -27,11 +27,13 @@ const Kitchen2_3DModel = () => {
   }
 
   const { progress } = useProgress()
-  const LazyLoadedModel = React.lazy(() => import('@/public/Kitchen_2'))
+  const LazyLoadedModel = React.lazy(
+    () => import('@/public/3DModels/Kitchen_2')
+  )
 
   const KitchenModel = () => {
     useEffect(() => {
-      useGLTF.preload('@/public/Kitchen_2')
+      useGLTF.preload('@/public/3DModels/Kitchen_2')
     }, [])
 
     return (

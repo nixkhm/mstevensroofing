@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Patio3DModel from './Patio3DModel'
 import Patio2_3DModel from './Patio2_3DModel'
+import Image from 'next/image'
 
 const PatioInfo = () => {
   const [webGLSupported, setWebGLSupported] = useState(true)
@@ -16,7 +17,7 @@ const PatioInfo = () => {
 
   return (
     <div
-      className='w-full  p-10 text-center'
+      className='w-full p-10 text-center'
       style={{
         background: `linear-gradient(#2E2F2F, #847577, #FDF0D5)`
       }}
@@ -27,11 +28,17 @@ const PatioInfo = () => {
             <Patio3DModel />
           ) : (
             <div className='relative h-full w-full'>
+              {/* <Image
+                src={Patio_Placeholder}
+                alt='Patio Placeholder'
+                layout='fill'
+                fill
+              /> */}
               <h1 className='relative flex items-center justify-center bg-white p-2 text-sm font-bold text-black'>
                 3D Models are supported by WebGL enabled browsers (Chrome,
                 Firefox, Edge)
               </h1>
-              <p>GIF Placeholder</p>
+              GIF Placeholder
             </div>
           )}
         </div>
@@ -52,7 +59,7 @@ const PatioInfo = () => {
 
         <div className='col-span-2'>
           <h1 className='mb-3 text-3xl font-bold text-black'>
-            Transform Your Backyard into a Tranquil Oasis of Dreams!
+            Transform Your Backyard into your Dreams
           </h1>
           <p className='mx-auto text-sm font-normal text-black lg:w-3/4 lg:text-xl'>
             Our patio remodeling services redefine excellence, turning your

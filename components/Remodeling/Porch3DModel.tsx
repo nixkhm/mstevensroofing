@@ -28,11 +28,11 @@ const Porch3DModel = () => {
 
   const { progress } = useProgress()
 
-  const LazyLoadedModel = React.lazy(() => import('@/public/Porch'))
+  const LazyLoadedModel = React.lazy(() => import('@/public/3DModels/Porch'))
 
   const PorchModel = () => {
     useEffect(() => {
-      useGLTF.preload('@/public/Porch')
+      useGLTF.preload('@/public/3DModels/Porch')
     }, [])
 
     return (
