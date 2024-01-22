@@ -57,7 +57,7 @@ const Porch3DModel = () => {
 
   return (
     <div
-      className={`lg:w[50%] w[100%] h-[100%] items-center bg-sky-100 ${
+      className={`lg:w[50%] w[100%] h-[100%] items-center bg-sky-200 ${
         isGrabbing ? 'cursor-grabbing' : 'hover:cursor-grab'
       }`}
       style={{ height: '100%', width: '100%', margin: '0 auto' }}
