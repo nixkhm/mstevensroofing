@@ -13,11 +13,11 @@ const ServicesTicker: React.FC<ServicesTickerProps> = ({ services, speed }) => {
 
   return (
     <div ref={ref} className='bg-black p-6 text-center text-lg'>
-      <Ticker slideSpeed={inView ? speed : 999999999} isNewsTicker={true}>
+      <Ticker slideSpeed={inView ? speed : 9999} isNewsTicker={true}>
         {duplicatedServices.map((service, index) => (
           <h1
             key={index}
-            className='ml-20 mr-2 h-10 w-60 rounded-xl bg-white p-2 font-semibold text-black'
+            className='ml-20 mr-2 h-10 w-60 rounded-xl bg-white p-2 font-semibold text-black transition duration-300 hover:scale-125 hover:bg-yellow-500  hover:font-bold'
           >
             {service}
           </h1>

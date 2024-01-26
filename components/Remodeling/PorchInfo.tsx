@@ -5,7 +5,7 @@ import Porch3DModel from './Porch3DModel'
 import Button from '../Button'
 import { twMerge } from 'tailwind-merge'
 import { useRouter } from 'next/navigation'
-import ServicesTicker from '../Ticker'
+import ServicesTicker from '../ServicesTicker'
 
 const EntryInfo = () => {
   const [webGLSupported, setWebGLSupported] = useState(true)

@@ -4,7 +4,7 @@ import Kitchen2_3DModel from './Kitchen2_3DModel'
 import Kitchen_Placeholder from '@/public/Remodeling_Images/kitchen1_placeholder.gif'
 import Kitchen2_Placeholder from '@/public/Remodeling_Images/kitchen2_placeholder.gif'
 import Image from 'next/image'
-import Ticker from '../Ticker'
+import Ticker from '../ServicesTicker'
 
 const KitchenInfo = () => {
   const [webGLSupported, setWebGLSupported] = useState(true)

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Patio3DModel from './Patio3DModel'
 import Patio2_3DModel from './Patio2_3DModel'
 import Image from 'next/image'
-import ServicesTicker from '../Ticker'
+import ServicesTicker from '../ServicesTicker'
 
 const PatioInfo = () => {
   const [webGLSupported, setWebGLSupported] = useState(true)

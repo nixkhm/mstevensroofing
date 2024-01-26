@@ -25,8 +25,8 @@ export default function Remodeling() {
         title='Remodeling'
         alt='Remodeling Header'
       />
-      <KitchenInfo />
       <PatioInfo />
+      <KitchenInfo />
       <PorchInfo />
       <Footer />
     </div>

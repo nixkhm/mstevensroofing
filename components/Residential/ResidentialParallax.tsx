@@ -60,7 +60,6 @@ const ResidentialParallax = () => {
       tl.to(cloudsLeftRef.current, { x: '-20%', opacity: 0 }, 0)
       tl.to(cloudsRightRef.current, { x: '20%', opacity: 0 }, 0)
       tl.to(sunRef.current, { y: '+=200%' }, 0)
-      tl.to(copyRef.current, { y: '-=200%', opacity: '+=5' }, 0)
       housesRef.forEach(house => {
         tl.to(house.current, { opacity: '+=90' }, 0)
       })
@@ -148,14 +147,11 @@ const ResidentialParallax = () => {
           alt='house'
         />
 
-        <div ref={copyRef} className='copy'>
-          <h1 className='rounded-full border-2 border-black bg-blue-600 bg-opacity-80 p-5 text-xl font-bold outline-black lg:text-4xl'>
+        <div className='flex flex-col pt-6 text-center lg:pt-28'>
+          <h1 className='relative left-[25%] w-[50%] rounded-full border-2 border-black bg-blue-500 bg-opacity-80 p-5 text-xl font-bold lg:text-4xl'>
             Residential Roofing, Professionally Done
           </h1>
-          <p
-            className='text-md z-50 mt-5 rounded-xl border-2 border-black bg-violet-200 p-8 font-semibold text-black lg:text-xl'
-            style={{ width: '75%' }}
-          >
+          <p className='lg:text-md relative left-[19%] z-50 mt-5 w-[60%] rounded-xl border-2 border-black bg-violet-200 p-8 text-center text-sm font-semibold text-black lg:text-xl'>
             If you&apos;re currently contending with a leaky roof or
             contemplating a fresh start with a new one, we encourage you to take
             prompt action. Contact us, and we&apos;ll promptly schedule a visit
