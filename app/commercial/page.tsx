@@ -1,5 +1,6 @@
 'use client'
 
+import CommercialIntro from '@/components/Commericial/CommercialIntro'
 import Header from '@/components/Header'
 import commercial_header from '@/public/Commercial_Images/commercial_header.png'
 import { useEffect, useState } from 'react'
@@ -22,6 +23,7 @@ export default function Commercial() {
         title='Commercial'
         alt='Commercial Header'
       />
+      <CommercialIntro />
     </div>
   )
 }

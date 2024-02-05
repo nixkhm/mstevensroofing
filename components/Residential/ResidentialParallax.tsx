@@ -148,7 +148,7 @@ const ResidentialParallax = () => {
         />
 
         <div className='flex flex-col pt-6 text-center lg:pt-28'>
-          <h1 className='relative left-[25%] w-[50%] rounded-full border-2 border-black bg-blue-500 bg-opacity-80 p-5 text-xl font-bold lg:text-4xl'>
+          <h1 className='relative left-[25%] w-[50%] rounded-full  bg-blue-500 bg-opacity-80 p-5 text-xl font-bold lg:text-4xl'>
             Residential Roofing, Professionally Done
           </h1>
           <p className='lg:text-md relative left-[19%] z-50 mt-5 w-[60%] rounded-xl border-2 border-black bg-violet-200 p-8 text-center text-sm font-semibold text-black lg:text-xl'>

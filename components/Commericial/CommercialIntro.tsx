@@ -1,0 +1,41 @@
+import BluePrint from '@/public/Commercial_Images/blueprint.jpeg'
+import TextBubble from '../TextBubble'
+
+const CommercialIntro = () => {
+  return (
+    <div
+      className='relative h-full w-full bg-cover bg-center'
+      style={{ backgroundImage: `url(${BluePrint.src})` }}
+    >
+      <div className='relative left-1/2 top-[15%] w-[50%] -translate-x-1/2 -translate-y-1/2 transform rounded-3xl bg-black bg-opacity-75 p-4 text-white'>
+        <h1 className='text-center text-4xl font-bold'>
+          Quality Construction Built to Last
+        </h1>
+      </div>
+      <div className='relative top-[10%] transform lg:absolute lg:left-1/2 lg:top-[25%] lg:-translate-x-1/2'>
+        <div className='mx-auto w-3/4'>
+          <TextBubble
+            className='text-center text-lg font-semibold'
+            text='As a trusted leader in the industry, we bring your visions to life with quality craftsmanship and a commitment to lasting structures. From groundbreaking to completion, our dedicated team ensures precision, reliability, and a seamless construction experience'
+          />
+        </div>
+      </div>
+      <div className='text-md relative top-[22%] flex items-center justify-center text-center lg:top-[40%]'>
+        <div className='smooth duration-400 m-2 grid w-full grid-cols-1 gap-5 transition-transform lg:w-[50%] lg:grid-cols-1 lg:gap-10 lg:hover:scale-110'>
+          <TextBubble
+            infoCard
+            text='Our commitment to quality craftsmanship ensures that your commercial project is built to withstand the test of time.'
+            className='bg-blue-300 '
+          />
+          <TextBubble
+            infoCard
+            text='Elevate your business with our commitment to excellence in every construction project.'
+            className='bg-blue-300 '
+          />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default CommercialIntro
