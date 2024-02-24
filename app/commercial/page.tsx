@@ -1,6 +1,8 @@
 'use client'
 
+import ChooseUs from '@/components/Commericial/ChooseUs'
 import CommercialIntro from '@/components/Commericial/CommercialIntro'
+import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import commercial_header from '@/public/Commercial_Images/commercial_header.png'
 import { useEffect, useState } from 'react'
@@ -24,6 +26,8 @@ export default function Commercial() {
         alt='Commercial Header'
       />
       <CommercialIntro />
+      <ChooseUs />
+      <Footer />
     </div>
   )
 }

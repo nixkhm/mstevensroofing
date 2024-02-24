@@ -1,14 +1,22 @@
 import { useRouter } from 'next/navigation'
-import Button from '../Button'
+import Button from './Button'
 
-const ResidentialBottom = () => {
+interface GalleryTestimonialProps {
+  textColor: string
+}
+
+const GalleryTestimonial: React.FC<GalleryTestimonialProps> = ({
+  textColor
+}) => {
   const router = useRouter()
   return (
     <div className='flex h-full flex-col items-center justify-center text-center'>
       <div className='flex flex-row'>
         <div className='m-10'>
-          <h1 className='mb-5 text-center text-lg font-bold text-white lg:text-3xl'>
-            View Previous Residential Projects
+          <h1
+            className={`text-md mb-5 text-center font-bold text-${textColor} lg:text-3xl`}
+          >
+            Browse Our Past Client Work
           </h1>
           <Button
             onClick={() => router.push('/gallery')}
@@ -18,7 +26,9 @@ const ResidentialBottom = () => {
           </Button>
         </div>
         <div className='m-10'>
-          <h1 className='mb-5 text-center text-xl font-bold text-white lg:text-3xl'>
+          <h1
+            className={`text-md mb-5 text-center font-bold text-${textColor} lg:text-3xl`}
+          >
             Hear from Multiple Satisfied Clients
           </h1>
           <Button
@@ -33,4 +43,4 @@ const ResidentialBottom = () => {
   )
 }
 
-export default ResidentialBottom
+export default GalleryTestimonial

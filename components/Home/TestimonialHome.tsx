@@ -42,7 +42,7 @@ const TestimonialHome = () => {
         ></div>
         <Button
           className={twMerge(
-            'mb-5 mt-8 bg-blue-900 p-5 text-white hover:bg-blue-600 hover:text-black'
+            'mb-5 mt-8 bg-blue-900 p-5 text-white hover:bg-blue-600'
           )}
         >
           View More Testimonials
