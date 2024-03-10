@@ -4,7 +4,7 @@ const AwardsHome = () => {
   return (
     <div className='relative'>
       <div className='flex flex-col items-center bg-blue-400 py-8 text-center'>
-        <h1 className='mb-8 text-4xl font-extrabold lg:text-5xl xl:text-6xl'>
+        <h1 className='mb-8 pt-10 text-4xl font-extrabold lg:text-5xl xl:text-6xl'>
           Awards
         </h1>
         <div className='max-w-[475px] lg:max-w-[1000px]'>

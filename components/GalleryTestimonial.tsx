@@ -32,7 +32,7 @@ const GalleryTestimonial: React.FC<GalleryTestimonialProps> = ({
             Hear from Multiple Satisfied Clients
           </h1>
           <Button
-            onClick={() => router.push('/testimonials')}
+            onClick={() => router.push('/#testimonials')}
             className='mb-5 bg-blue-300 p-5 text-lg hover:bg-blue-600 hover:text-white'
           >
             Testimonials

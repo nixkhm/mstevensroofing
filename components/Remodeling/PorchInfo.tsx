@@ -91,7 +91,7 @@ const EntryInfo = () => {
               Get a Free Quote
             </Button>
             <Button
-              onClick={() => router.push('/testimonials')}
+              onClick={() => router.push('/#testimonials')}
               className={twMerge(
                 'mt-10 border-4 border-black bg-yellow-300 p-4 text-xl hover:bg-white lg:ml-5 lg:p-5'
               )}

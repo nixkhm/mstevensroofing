@@ -30,7 +30,7 @@ const TestimonialHome = () => {
   }, [])
 
   return (
-    <div className='flex flex-row bg-gray-300'>
+    <div id='testimonials' className='flex flex-row bg-gray-300 pt-10'>
       <div className='mt-10 flex-1 flex-col items-center justify-center text-center'>
         <h1 className='text-4xl font-extrabold'>Testimonials</h1>
         <p className='mt-8 text-2xl font-semibold'>
@@ -40,13 +40,6 @@ const TestimonialHome = () => {
           className='elfsight-app-3bcb31fb-78b4-47aa-91a8-5e66fcc4baea mt-10'
           data-elfsight-app-lazy
         ></div>
-        <Button
-          className={twMerge(
-            'mb-5 mt-8 bg-blue-900 p-5 text-white hover:bg-blue-600'
-          )}
-        >
-          View More Testimonials
-        </Button>
       </div>
 
       <div className='mr-0 mt-10 hidden flex-1 lg:mr-10 lg:block'>
